@@ -9,7 +9,7 @@ import React from "react";
 // import { about, home, location, menu, reservation, welcome } from "./pages";
 
 function App() {
-  return <div className="App">TestHuu</div>;
+  return <div className="App">Test</div>;
 }
 
 export default App;

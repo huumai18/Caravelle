@@ -1,2 +1,2 @@
-export { fooder } from "./fooder";
+export { footer } from "./footer";
 export { Nav } from "./Nav";
