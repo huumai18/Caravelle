@@ -8,8 +8,8 @@ import React from "react";
 
 // import { about, home, location, menu, reservation, welcome } from "./pages";
 
-export const App = () => {
-  return <div>Test</div>;
-};
+function App() {
+  return <div className="App">Yoo</div>;
+}
 
 export default App;
