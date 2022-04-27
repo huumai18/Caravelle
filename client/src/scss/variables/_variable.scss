@@ -18,3 +18,11 @@ input, button, select, textarea, optgroup, option {
     font-family: $fontBody;
     color: $white;    
 }
+
+:export {
+    main: $main;
+    secondary: $secondary;
+    black: $black;
+    white: $white;
+    font-family: $fontHeading;
+}
