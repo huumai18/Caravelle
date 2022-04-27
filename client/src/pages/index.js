@@ -1,4 +1,4 @@
-export {} from "./about";
+export { About } from "./about";
 export { Home } from "./home";
 export {} from "./location";
 export {} from "./menu";

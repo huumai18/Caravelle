@@ -7,12 +7,13 @@ import React from "react";
 // } from "react-router-dom";
 
 // import { about, home, location, menu, reservation, welcome } from "./pages";
-import { Home } from "./pages/home";
+import { Home, About } from "./pages";
 
 function App() {
   return (
     <div className="App">
       <Home />
+      <About />
     </div>
   );
 }

@@ -1,28 +1,33 @@
-//color 
-$main : #66BABA;
-$secondary : #FFFDF1;
-$black: #04030F;
-$white: #FFFBFF;
+//color
+$main: #66baba;
+$secondary: #fffdf1;
+$black: #04030f;
+$white: #fffbff;
 
-//font 
-$font-family : 'Playball';
-$fontBody: 'Roboto';
+//font
+$font-family: "Playball";
+$fontBody: "Roboto";
 
 @for $index from 1 through 6 {
-    h#{$index} {
-       font-family: $font-family;
-    }
+  h#{$index} {
+    font-family: $font-family;
+    margin: 0.2em;
+    width: 70%;
+  }
 }
 
-input, button, select, textarea {
-    font-family: $fontBody;
-    color: $white;    
+input,
+button,
+select,
+textarea {
+  font-family: $fontBody;
+  color: $white;
 }
 
 :export {
-    main: $main;
-    secondary: $secondary;
-    black: $black;
-    white: $white;
-    font-family: $font-family;
+  main: $main;
+  secondary: $secondary;
+  black: $black;
+  white: $white;
+  font-family: $font-family;
 }
