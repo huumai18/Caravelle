@@ -1,6 +1,7 @@
-@forward 'about';
-@forward 'home';
-@forward 'location';
-@forward 'menu';
-@forward 'reservation';
-@forward 'welcome';
+@forward './pages/home';
+@forward './pages/about';
+@forward './pages/location';
+@forward './pages/menu';
+@forward './pages/reservation';
+@forward './pages/welcome';
+@forward './variables/variable'

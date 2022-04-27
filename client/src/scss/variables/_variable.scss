@@ -1,0 +1,20 @@
+//color 
+$main : #66BABA;
+$secondary : #FFFDF1;
+$black: #04030F;
+$white: #FFFBFF;
+
+//font 
+$font-family : 'Playball';
+$fontBody: 'Roboto';
+
+@for $index from 1 through 6 {
+    h#{$index} {
+       font-family: $fontHeading;
+    }
+}
+
+input, button, select, textarea, optgroup, option {
+    font-family: $fontBody;
+    color: $white;    
+}
