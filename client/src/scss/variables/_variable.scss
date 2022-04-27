@@ -10,11 +10,11 @@ $fontBody: 'Roboto';
 
 @for $index from 1 through 6 {
     h#{$index} {
-       font-family: $fontHeading;
+       font-family: $font-family;
     }
 }
 
-input, button, select, textarea, optgroup, option {
+input, button, select, textarea {
     font-family: $fontBody;
     color: $white;    
 }

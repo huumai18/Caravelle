@@ -7,9 +7,14 @@ import React from "react";
 // } from "react-router-dom";
 
 // import { about, home, location, menu, reservation, welcome } from "./pages";
+import { Home } from "./pages/home";
 
 function App() {
-  return <div className="App">Test</div>;
+  return (
+    <div className="App">
+      <Home />
+    </div>
+  );
 }
 
 export default App;
