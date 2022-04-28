@@ -1,8 +1,4 @@
-
-@use '../variables/variable' as *;
-
 @use "../variables" as *;
-
 
 .container {
   width: 1440px;
@@ -10,22 +6,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
+}
 
 .footer {
     background-color: $black;
     columns: 2;
     padding: 30px;
-
-
-  .MuiButton-root {
-    color: $black;
-    background-color: $white;
-    margin-right: 2em;
-    &:hover {
-      color: $white;
-      background-color: $main;
-    }
-  }
-
 }
