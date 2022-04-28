@@ -1,0 +1,65 @@
+@use '../variables/variable' as *;
+@use "../container" as *;
+
+
+.left-footer {
+        float: left;
+        width: 100%;
+        margin-left: 9em;
+        height: 80%;
+        padding: 1em 0.5em 0.5em 0.5em;
+        .left-text {
+            color: $white;
+            padding: 20px 20px 20px;
+            h2 {
+                margin: 0.2em;
+                width: 35%;
+                padding: 5px;
+            }
+            p {
+                margin: 0.2em;
+                width: 100%;
+                padding: 5px;
+                color: gray;
+            }
+        }
+        .left-button {
+            padding: 5px;
+            Button {
+                float: left;
+                margin-left: 20px;
+                background-color: $main;
+                border-radius: 5px;
+                color: $white;
+                text-align: center;
+                font-size: 15px;
+                &:hover {
+                    background-color: $white;
+                    color: $main;
+                }
+            }
+        }
+    }
+    .right-footer {
+        float: right;
+        padding: 2em 5em 0;
+        width: 45%;
+        height: 90%;
+        p {
+            color: $main;
+            margin-left: 40px;
+        }
+        ul {
+            padding-top: 1px;
+        }
+        li {
+            padding-top: 0.8em;
+            a {
+                color: $white;
+                text-decoration: none;
+                &:hover {
+                    color: $main;
+                }
+            }
+        }
+    }
