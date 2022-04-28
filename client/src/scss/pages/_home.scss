@@ -14,18 +14,4 @@
       height: 30em;
     }
   }
-  .MuiButton-root {
-    &:hover {
-      background-color: $white;
-      color: $black;
-      text-decoration: underline 2px $main;
-      text-underline-offset: 0.5em;
-    }
-    &:focus {
-      background-color: $main;
-      color: $white;
-    }
-  }
 }
-
-//test
