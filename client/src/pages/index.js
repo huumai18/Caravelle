@@ -1,6 +1,6 @@
 export { About } from "./about";
 export { Home } from "./home";
-export {} from "./location";
+export { Location } from "./location";
 export {} from "./menu";
 export {} from "./reservation";
 export {} from "./welcome";

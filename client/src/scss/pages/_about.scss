@@ -1,5 +1,5 @@
-@use "container" as *;
-@use "../variables/variable" as *;
+@use "../container" as *;
+@use "../variables" as *;
 
 .about-container {
   border: 1px solid $black;
