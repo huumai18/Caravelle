@@ -6,16 +6,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   .MuiButton-root {
-    color: $black;
-    background-color: $white;
-    margin-right: 2em;
     &:hover {
-      color: $white;
-      background-color: $main;
+      background-color: $white;
+      color: $black;
+      text-decoration: underline 2px $main;
+      text-underline-offset: 0.5em;
     }
-  }
+    &:focus {
+      background-color: $main;
+      color: $white;
 }
 
 .footer {
