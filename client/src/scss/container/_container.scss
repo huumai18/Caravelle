@@ -1,4 +1,8 @@
+
+@use '../variables/variable' as *;
+
 @use "../variables" as *;
+
 
 .container {
   width: 1440px;
@@ -7,7 +11,13 @@
   justify-content: center;
   align-items: center;
 
-  //MUI Button
+
+.footer {
+    background-color: $black;
+    columns: 2;
+    padding: 30px;
+
+
   .MuiButton-root {
     color: $black;
     background-color: $white;
@@ -17,4 +27,5 @@
       background-color: $main;
     }
   }
+
 }
