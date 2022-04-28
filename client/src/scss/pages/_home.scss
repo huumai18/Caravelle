@@ -1,9 +1,5 @@
-
-@use "container" as *;
-@use '../variables/variable' as *;
-
 @use "../container" as *;
-@use "../variables" as *;
+@use '../variables/variable' as *;
 
 
 .hero-section {
