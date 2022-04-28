@@ -6,10 +6,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  .MuiButton-root {
+    color: $black;
+    background-color: $white;
+    margin-right: 2em;
+    &:hover {
+      color: $white;
+      background-color: $main;
+    }
+  }
 }
 
 .footer {
-    background-color: $black;
-    columns: 2;
-    padding: 30px;
+  background-color: $black;
+  columns: 2;
+  padding: 30px;
 }
