@@ -1,0 +1,16 @@
+@use "../variables" as *;
+
+.MuiButton-root {
+  border: none;
+  color: $black;
+  background-color: $white;
+  margin-right: 2em;
+  &:hover {
+    text-decoration: underline 2px $main;
+    text-underline-offset: 0.5em;
+  }
+  &:focus {
+    background-color: $main;
+    color: $white;
+  }
+}

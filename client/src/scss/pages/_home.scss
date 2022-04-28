@@ -1,33 +1,34 @@
+
 @use "container" as *;
 @use '../variables/variable' as *;
 
+@use "../container" as *;
+@use "../variables" as *;
+
+
 .hero-section {
-    margin-top:-0.5em;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  margin-top: -0.5em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    .background {
-        img {
-            height: 30em;
-        }
+  .background {
+    img {
+      height: 30em;
     }
-
-    .MuiButton-root {
-        border: none;
-        color: $black;
-        background-color: $white;
-        margin-right: 2em;
-        &:hover {
-            text-decoration: underline 2px $main;
-            text-underline-offset: 0.5em;
-        }
-        &:focus {
-            background-color: $main;
-            color: $white;  
-          }
-       
+  }
+  .MuiButton-root {
+    &:hover {
+      background-color: $white;
+      color: $black;
+      text-decoration: underline 2px $main;
+      text-underline-offset: 0.5em;
     }
+    &:focus {
+      background-color: $main;
+      color: $white;
+    }
+  }
 }
