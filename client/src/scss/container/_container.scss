@@ -16,12 +16,10 @@
     &:focus {
       background-color: $main;
       color: $white;
-    }
-  }
 }
 
 .footer {
-    background-color: $black;
-    columns: 2;
-    padding: 30px;
+  background-color: $black;
+  columns: 2;
+  padding: 30px;
 }
