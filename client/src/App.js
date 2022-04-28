@@ -19,6 +19,7 @@ function App() {
         <About />
       </Router>
       {/* footer */}
+      <br />
       <FooterPages />
     </>
   );
