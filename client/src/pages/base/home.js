@@ -1,6 +1,6 @@
-import NavBg from "../images/nav-background.png";
-import Logo from "../assets/caravelle.svg";
-import { Nav } from "../components";
+import NavBg from "../../images/nav-background.png";
+import Logo from "../../assets/caravelle.svg";
+import { Nav } from "../../components";
 
 export const Home = () => {
   return (
