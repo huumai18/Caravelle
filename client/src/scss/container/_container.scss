@@ -1,15 +1,18 @@
 @use "../variables" as *;
 
 .container {
-  width: 100vw;
+  width: 1440px;
   max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 
   .MuiButton-root {
+    background-color: $white;
     color: $black;
     &:hover {
+      color: $black;
       background-color: $white;
       text-decoration: underline 2px $main;
       text-underline-offset: 0.5em;
