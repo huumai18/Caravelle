@@ -1,7 +1,7 @@
 @use "../variables" as *;
 
 .container {
-  width: 1440px;
+  width: 100vw;
   max-width: 100%;
   display: flex;
   justify-content: center;
@@ -13,10 +13,6 @@
       background-color: $white;
       text-decoration: underline 2px $main;
       text-underline-offset: 0.5em;
-    }
-    &:focus {
-      background-color: $main;
-      color: $white;
     }
   }
 }
