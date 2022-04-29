@@ -9,11 +9,17 @@
   justify-content: center;
   align-items: center;
 
+  .MuiButton-root {
+    margin-right: 2em;
+    &:focus {
+      background-color: $main;
+      color: $white;
+    }
+  }
+
   .background {
     img {
       height: 30em;
     }
   }
 }
-
-//test pull request
