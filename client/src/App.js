@@ -3,8 +3,7 @@ import React from "react";
 import { BrowserRouter as Router, NavLink, Route } from "react-router-dom";
 
 // import { about, home, location, menu, reservation, welcome } from "./pages";
-
-import { Home, About, Location, FooterPages } from "./pages";
+import { Home, About, Reservation, Location, FooterPages } from "./pages";
 
 function App() {
   return (
@@ -12,6 +11,7 @@ function App() {
       <Router>
         <Home />
         <About />
+        <Reservation />
         <Location />
       </Router>
       {/* footer */}
