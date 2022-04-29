@@ -2,7 +2,7 @@ import { about, ramen, sushi } from "../../images";
 
 export const About = () => {
   return (
-    <div className="container">
+    <div className="container about">
       <div className="about-container">
         <div className="about background ">
           <img src={about} alt="about caravelle" />
