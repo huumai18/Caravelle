@@ -6,10 +6,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   .MuiButton-root {
+    color: $black;
     &:hover {
       background-color: $white;
-      color: $black;
       text-decoration: underline 2px $main;
       text-underline-offset: 0.5em;
     }
