@@ -1,4 +1,4 @@
-import { about, ramen, sushi } from "../images";
+import { about, ramen, sushi } from "../../images";
 
 export const About = () => {
   return (

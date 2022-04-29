@@ -1,11 +1,6 @@
 import React from "react";
 
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  BrowserRouter,
-} from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
 // import { about, home, location, menu, reservation, welcome } from "./pages";
 
