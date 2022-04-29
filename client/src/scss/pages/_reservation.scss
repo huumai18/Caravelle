@@ -16,10 +16,8 @@
         }
     }
     .reservation-text {
-        width: auto;
-        text-align: center;
-        position: relative;
-        left: 26em;
+        display: flex;
+        justify-content: center;
         p {
             width: 45%;
             font-size: 1.5em;
@@ -35,6 +33,30 @@
                 right: 5%;
                 font-family: $font-family;
                 font-size: 1em;
+            }
+        }
+    }
+    .reservation-images {
+        display: flex;
+        justify-content: center;
+        .images-left {
+            img {
+                height: 30em;
+                width: 18em;
+                &:hover {
+                    height: 31em;
+                    width: 19em;
+                }
+            }
+        }
+        .images-right {
+            img {
+                height: 25em;
+                width: 15em;
+                &:hover {
+                    height: 26em;
+                    width: 16em;
+                }
             }
         }
     }
