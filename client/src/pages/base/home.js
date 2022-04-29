@@ -1,11 +1,16 @@
-import { Nav_Background } from "../components/home_nav_background";
+import NavBg from "../../images/nav-background.png";
+import Logo from "../../assets/caravelle.svg";
 import { Nav } from "../../components";
 
 export const Home = () => {
   return (
     <div className="container">
       <div className="hero-section">
-        <Nav_Background />
+        <div>
+          <img src={NavBg} alt="home page background" />
+        </div>
+
+        <img src={Logo} className="logo" alt="logo" />
         <Nav />
       </div>
     </div>
