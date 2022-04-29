@@ -6,3 +6,4 @@ export const reservation1 = require("./reservation-img1.jpeg");
 export const reservation2 = require("./reservation-img2.jpeg");
 export const sushi = require("./sushi.png");
 export const ramen = require("./ramen.png");
+export const Narrow = require("./narrow.png");
