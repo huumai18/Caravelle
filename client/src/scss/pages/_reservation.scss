@@ -9,6 +9,7 @@
     padding-top: 1%;
     display: table;
     position: relative;
+    padding: 50px;
     .reservation-header {
         width: 100%;
         h1{
@@ -19,7 +20,7 @@
         display: flex;
         justify-content: center;
         p {
-            width: 45%;
+            width: 50%;
             font-size: 1.5em;
             font-family: $font-family;
             .narrow-img {
@@ -36,28 +37,28 @@
             }
         }
     }
-    .reservation-images {
-        display: flex;
+    .hero {
         justify-content: center;
-        .images-left {
-            img {
-                height: 30em;
-                width: 18em;
-                &:hover {
-                    height: 31em;
-                    width: 19em;
-                }
-            }
+        height: 500px;
+        display: flex;
+        padding-top: 50px;
+        img {
+            height: 400px;
+            width: 250px;
+            transition: transform 0.3s ease-out;
+            cursor: pointer;
         }
-        .images-right {
-            img {
-                height: 25em;
-                width: 15em;
-                &:hover {
-                    height: 26em;
-                    width: 16em;
-                }
-            }
+        .model-left {
+            transform: translate(0%, 10%);
+        }
+        .model-right {
+            transform: translate(0%, -10%);
+        }
+        &:hover .model-left{
+            transform: translate(0%, 0%);
+        }
+        &:hover .model-right {
+            transform: translate(0%, 0%);
         }
     }
 }

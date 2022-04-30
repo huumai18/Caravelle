@@ -24,13 +24,9 @@ export const Reservation = () => {
 
         {/* Image Reservation */}
 
-        <div className="reservation-images">
-          <div className="images-left">
-            <img src={reservation1} alt="reservation1" />
-          </div>
-          <div className="images-right">
-            <img src={reservation2} alt="reservation1" />
-          </div>
+        <div className="hero">
+          <img className="model-left" src={reservation1} alt="model" />
+          <img className="model-right" src={reservation2} alt="model" />
         </div>
       </div>
     </div>
