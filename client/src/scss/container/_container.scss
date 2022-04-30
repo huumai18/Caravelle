@@ -1,12 +1,11 @@
 @use "../variables" as *;
 
 .container {
-  width: 1440px;
+  width: 100%;
   max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
 
   .MuiButton-root {
     background-color: $white;
@@ -16,6 +15,7 @@
       background-color: $white;
       text-decoration: underline 2px $main;
       text-underline-offset: 0.5em;
+      transition: 300ms ease;
     }
   }
 }
