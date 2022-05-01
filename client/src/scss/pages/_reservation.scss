@@ -48,16 +48,16 @@
             transition: transform 0.3s ease-out;
             cursor: pointer;
         }
-        .model-left {
+        .model-left, .model-right2 {
             transform: translate(0%, 10%);
         }
-        .model-right {
+        .model-left2, .model-right {
             transform: translate(0%, -10%);
         }
-        &:hover .model-left{
-            transform: translate(0%, 0%);
-        }
-        &:hover .model-right {
+        &:hover .model-left,
+        &:hover .model-left2,
+        &:hover .model-right,
+        &:hover .model-right2 {
             transform: translate(0%, 0%);
         }
     }
