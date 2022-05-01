@@ -1,25 +1,27 @@
 @use "../container" as *;
-@use "../variables/variable" as *;
+@use "../variables/" as *;
 
-.hero-section {
-  margin-top: -0.5em;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.home {
+  .container {
+    margin-top: -0.5em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-  .MuiButton-root {
-    margin-right: 2em;
-    &:focus {
-      background-color: $main;
-      color: $white;
+    .MuiButton-root {
+      margin-right: 2em;
+      &:focus {
+        background-color: $main;
+        color: $white;
+      }
     }
-  }
 
-  .background {
-    img {
-      height: 30em;
+    .background {
+      img {
+        height: 30em;
+      }
     }
   }
 }
