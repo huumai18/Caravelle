@@ -1,5 +1,6 @@
-import { Button } from "@mui/material";
 import { Narrow, reservation1, reservation2 } from "../../images";
+import { Button } from "@mui/material";
+import React from "react";
 
 export const Reservation = () => {
   return (
