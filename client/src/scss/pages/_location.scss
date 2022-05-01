@@ -1,29 +1,31 @@
 @use "../container" as *;
 @use "../variables" as *;
 
-.location-container {
-  width: 90%;
-  height: 100vh;
-  position: relative;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
+.location {
+  .container {
+    width: 90%;
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 
-  .direction {
-    width: 75%;
-    height: 45%;
-    background: rgba(255, 255, 255, 0.81);
-    border-radius: 10px;
-    margin-bottom: 5%;
-    .headings {
-      width: 40%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      align-items: flex-start;
-      padding-left: 3em;
+    .direction {
+      width: 75%;
+      height: 45%;
+      background: rgba(255, 255, 255, 0.81);
+      border-radius: 10px;
+      margin-bottom: 5%;
+      .headings {
+        width: 40%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        padding-left: 3em;
+      }
     }
   }
 }

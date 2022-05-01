@@ -10,8 +10,8 @@ import React from "react";
 
 export const Reservation = () => {
   return (
-    <div className="container">
-      <div className="reservation-box">
+    <section className="reservation">
+      <div className="container">
         <div className="reservation-header">
           <h1>Welcome</h1>
         </div>
@@ -38,6 +38,6 @@ export const Reservation = () => {
           <img className="model-left2" src={reservation4} alt="model" />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
