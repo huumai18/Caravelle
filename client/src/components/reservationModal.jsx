@@ -36,12 +36,12 @@ export const ReservationModal = ({ OpenModal }) => {
           </div>
         </div>
         <div className="reservation-right">
-          <form>
+          <form action="/">
             <div className="infor">
               <label>
                 <h3>FULLNAME</h3>
               </label>
-              <input type="text" placeholder="John Wick" />
+              <input type="text" placeholder="John Wick" pattern="[A-Z][a-z]" />
             </div>
             <div className="infor">
               <label>
@@ -53,13 +53,18 @@ export const ReservationModal = ({ OpenModal }) => {
               <label>
                 <h3>PEOPLE</h3>
               </label>
-              <input className="number" type="number" placeholder="0" />
+              <input min={0} max={50} type="number" placeholder="0" />
             </div>
             <div className="infor">
               <label>
                 <h3>EMAIL</h3>
               </label>
-              <input type="email" placeholder="abc@gmail.com" />
+              <input
+                pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+                type="email"
+                placeholder="abc@gmail.com"
+                required
+              />
             </div>
             <div className="infor">
               <label>

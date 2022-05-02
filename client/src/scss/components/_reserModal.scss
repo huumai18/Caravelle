@@ -18,7 +18,9 @@
 }
 .modal-box {
     width: 100%;
+    height: 50%;
     columns: 2;
+    display: flex;
     .reservation-left {
         width: 70%;
         height: 100%;
@@ -34,7 +36,7 @@
     .reservation-right {
         width: 100%;
         justify-content: center;
-        transform: translate(-10%, 25%);
+        transform: translate(-10%, 55%);
         .infor {
             width: 80%;
             border-bottom: 2px solid black;
@@ -50,7 +52,7 @@
                 color: black;
                 border: none;
                 background: none;
-                padding: 6px;
+                padding: 5px;
                 outline: none;
                 font-family: $font-family;
             }
