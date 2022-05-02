@@ -1,41 +1,43 @@
 @use "../container" as *;
 @use "../variables" as *;
 
-.reservation-box {
+.reservation {
+  .container {
     height: 100%;
     width: 100%;
     align-items: center;
     text-align: center;
     padding-top: 1%;
-    display: table;
+    display: flex;
+    flex-direction: column;
     position: relative;
     padding: 50px;
     .reservation-header {
+      width: 100%;
+      h1 {
         width: 100%;
-        h1{
-            width: 100%;
-        }
+      }
     }
     .reservation-text {
-        display: flex;
-        justify-content: center;
-        p {
-            width: 50%;
-            font-size: 1.5em;
-            font-family: $font-family;
-            .narrow-img {
-                height: 25px;
-                width: 120px;
-                margin-left: 1%;
-                margin-bottom: -10px;
-            }
-            .reservation-line-button {
-                color: $black;
-                right: 5%;
-                font-family: $font-family;
-                font-size: 1em;
-            }
+      display: flex;
+      justify-content: center;
+      p {
+        width: 50%;
+        font-size: 1.5em;
+        font-family: $font-family;
+        .narrow-img {
+          height: 25px;
+          width: 120px;
+          margin-left: 1%;
+          margin-bottom: -10px;
         }
+        .reservation-line-button {
+          color: $black;
+          right: 5%;
+          font-family: $font-family;
+          font-size: 1em;
+        }
+      }
     }
     .reservation-images {
         justify-content: center;
@@ -61,4 +63,5 @@
             transform: translate(0%, 0%);
         }
     }
+  }
 }
