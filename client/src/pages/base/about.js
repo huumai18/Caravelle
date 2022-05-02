@@ -2,8 +2,8 @@ import { about, ramen, sushi } from "../../images";
 
 export const About = () => {
   return (
-    <div className="container about">
-      <div className="about-container">
+    <section className="about">
+      <div className="container">
         <div className="about background ">
           <img src={about} alt="about caravelle" />
         </div>
@@ -38,6 +38,6 @@ export const About = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
