@@ -12,7 +12,7 @@ import React from "react";
 
 export const Reservation = () => {
   return (
-    <section className="reservation">
+    <section className="reservation" id="reservation">
       <div className="container">
         <img className="vector vector1" src={vector1} alt="vector1" />
         <img className="vector vector2" src={vector2} alt="vector2" />

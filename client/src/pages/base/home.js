@@ -4,7 +4,7 @@ import { Nav } from "../../components";
 
 export const Home = () => {
   return (
-    <section className="home">
+    <section className="home" id="home">
       <div className="container">
         <div>
           <img src={NavBg} alt="home page background" />
