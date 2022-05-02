@@ -9,7 +9,7 @@ export const Location = () => {
     lng: -114.066666,
   };
   return (
-    <section className="location">
+    <section className="location" id="location">
       <img
         style={{ width: "90%", height: "100%", position: "absolute" }}
         src={LocationImage}

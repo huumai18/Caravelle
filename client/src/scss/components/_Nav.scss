@@ -1,16 +1,22 @@
 @use "../variables" as *;
+@use "../container" as *;
 
-.MuiButton-root {
-  border: none;
-  color: $black;
+.link {
   background-color: $white;
-  margin-right: 2em;
-  &:hover {
-    text-decoration: underline 2px $main;
-    text-underline-offset: 0.5em;
-  }
-  &:focus {
+  color: $black;
+  margin: 3em;
+  font-family: $fontBody;
+  padding: 1em;
+  &.active {
     background-color: $main;
     color: $white;
+  }
+  &:hover {
+    color: $black;
+    background-color: $white;
+    text-decoration: underline 2px $main;
+    text-underline-offset: 0.5em;
+    transition: 300ms ease;
+    cursor: pointer;
   }
 }
