@@ -7,16 +7,26 @@
     width: 100%;
     align-items: center;
     text-align: center;
-    padding-top: 1%;
+    margin: 5em 0 5em 0;
     display: flex;
     flex-direction: column;
     position: relative;
-    padding: 50px;
     .reservation-header {
       width: 100%;
       h1 {
         width: 100%;
       }
+    }
+    .vector {
+      position: absolute;
+    }
+    .vector1 {
+      top: 0;
+      left: 0;
+    }
+    .vector2 {
+      bottom: 0;
+      right: 0;
     }
     .reservation-text {
       display: flex;
@@ -31,8 +41,7 @@
           margin-left: 1%;
           margin-bottom: -10px;
         }
-        .reservation-line-button {
-          color: $black;
+        button {
           right: 5%;
           font-family: $font-family;
           font-size: 1em;
@@ -40,28 +49,30 @@
       }
     }
     .reservation-images {
-        justify-content: center;
-        height: 500px;
-        display: flex;
-        padding-top: 50px;
-        img {
-            height: 400px;
-            width: 250px;
-            transition: transform 0.3s ease-out;
-            cursor: pointer;
-        }
-        .model-left, .model-right2 {
-            transform: translate(0%, 10%);
-        }
-        .model-left2, .model-right {
-            transform: translate(0%, -10%);
-        }
-        &:hover .model-left,
-        &:hover .model-left2,
-        &:hover .model-right,
-        &:hover .model-right2 {
-            transform: translate(0%, 0%);
-        }
+      justify-content: center;
+      height: 500px;
+      display: flex;
+      padding-top: 4em;
+      img {
+        height: 400px;
+        width: 250px;
+        transition: transform 0.3s ease-out;
+        cursor: pointer;
+      }
+      .model-left,
+      .model-right2 {
+        transform: translate(0%, 10%);
+      }
+      .model-left2,
+      .model-right {
+        transform: translate(0%, -10%);
+      }
+      &:hover .model-left,
+      &:hover .model-left2,
+      &:hover .model-right,
+      &:hover .model-right2 {
+        transform: translate(0%, 0%);
+      }
     }
   }
 }
