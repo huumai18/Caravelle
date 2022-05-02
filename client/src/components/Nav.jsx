@@ -1,5 +1,5 @@
 import { Link } from "react-scroll";
-import React, { useState } from "react";
+import React from "react";
 export const Nav = () => {
   return (
     <div className="container">
