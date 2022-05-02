@@ -39,31 +39,29 @@
         }
       }
     }
-    .hero {
-      justify-content: center;
-      height: 500px;
-      display: flex;
-      padding-top: 50px;
-      img {
-        height: 400px;
-        width: 250px;
-        transition: transform 0.3s ease-out;
-        cursor: pointer;
-      }
-      .model-left,
-      .model-right2 {
-        transform: translate(0%, 10%);
-      }
-      .model-left2,
-      .model-right {
-        transform: translate(0%, -10%);
-      }
-      &:hover .model-left,
-      &:hover .model-left2,
-      &:hover .model-right,
-      &:hover .model-right2 {
-        transform: translate(0%, 0%);
-      }
+    .reservation-images {
+        justify-content: center;
+        height: 500px;
+        display: flex;
+        padding-top: 50px;
+        img {
+            height: 400px;
+            width: 250px;
+            transition: transform 0.3s ease-out;
+            cursor: pointer;
+        }
+        .model-left, .model-right2 {
+            transform: translate(0%, 10%);
+        }
+        .model-left2, .model-right {
+            transform: translate(0%, -10%);
+        }
+        &:hover .model-left,
+        &:hover .model-left2,
+        &:hover .model-right,
+        &:hover .model-right2 {
+            transform: translate(0%, 0%);
+        }
     }
   }
 }
