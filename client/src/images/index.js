@@ -9,3 +9,5 @@ export const reservation4 = require("./sushi4.png");
 export const sushi = require("./sushi.png");
 export const ramen = require("./ramen.png");
 export const Narrow = require("./narrow.png");
+export const vector1 = require("./vector1.png");
+export const vector2 = require("./vector2.png");

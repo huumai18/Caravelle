@@ -4,6 +4,8 @@ import {
   reservation2,
   reservation3,
   reservation4,
+  vector1,
+  vector2,
 } from "../../images";
 import { Button } from "@mui/material";
 import React, { useState } from "react";
@@ -14,6 +16,8 @@ export const Reservation = () => {
   return (
     <section className="reservation">
       <div className="container">
+        <img className="vector vector1" src={vector1} alt="vector1" />
+        <img className="vector vector2" src={vector2} alt="vector2" />
         <div className="reservation-header">
           <h1>Welcome</h1>
         </div>
