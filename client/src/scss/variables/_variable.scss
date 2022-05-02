@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital@1&display=swap');
 //color
 $main: #66baba;
 $secondary: #fffdf1;
@@ -8,7 +8,7 @@ $white: #fffbff;
 
 //font
 $font-family: "Playball";
-$fontBody: "Roboto";
+$fontBody: "Roboto Serif", serif;
 
 @for $index from 1 through 6 {
   h#{$index} {

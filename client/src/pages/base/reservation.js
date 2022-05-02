@@ -6,9 +6,11 @@ import {
   reservation4,
 } from "../../images";
 import { Button } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
+import { ReservationModal } from "../../components";
 
 export const Reservation = () => {
+  const [open, handleOpen] = useState(false);
   return (
     <div className="container">
       <div className="reservation-box">
@@ -23,9 +25,13 @@ export const Reservation = () => {
             Located in the heart of Litile Italy, Sorrento restaurant pizzeria
             bring sleek modern design
             <img className="narrow-img" src={Narrow} alt="Narrow" />
-            <Button className="reservation-line-button">
+            <Button
+              onClick={() => handleOpen(true)}
+              className="reservation-line-button"
+            >
               Make Reservation
             </Button>
+            {open && <ReservationModal OpenModal={handleOpen} />}
           </p>
         </div>
 
