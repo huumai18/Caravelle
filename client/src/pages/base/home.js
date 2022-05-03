@@ -1,6 +1,6 @@
 import NavBg from "../../images/nav-background.png";
 import Logo from "../../assets/caravelle.svg";
-import { Nav } from "../../components";
+import { Roll } from "react-reveal";
 
 export const Home = () => {
   return (
@@ -14,8 +14,9 @@ export const Home = () => {
             alt="home page background"
           />
         </div>
-
-        <img src={Logo} className="logo" alt="logo" />
+        <Roll left>
+          <img src={Logo} className="logo" alt="logo" />
+        </Roll>
       </div>
     </section>
   );

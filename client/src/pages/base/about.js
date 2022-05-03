@@ -1,11 +1,14 @@
 import { about, ramen, sushi } from "../../images";
+import { Zoom } from "react-reveal";
 
 export const About = () => {
   return (
     <section className="about" id="about">
       <div className="container">
         <div className="about background ">
-          <img src={about} alt="about caravelle" />
+          <Zoom left>
+            <img src={about} alt="about caravelle" />
+          </Zoom>
         </div>
         <div className="about infor">
           <h3>~ WHO WE ARE</h3>
