@@ -1,0 +1,15 @@
+@use "../variables/breakpoints" as *;
+
+@mixin respond-to($key) {
+  $size: map-get($breakpoints, $key);
+
+  @if ($key == desktop) {
+    @media only screen and (min-width: $size) {
+      @content;
+    }
+  } @else {
+    @media only screen and (max-width: $size) {
+      @content;
+    }
+  }
+}
