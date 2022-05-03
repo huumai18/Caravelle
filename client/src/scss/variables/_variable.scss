@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital@1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playball&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:ital@1&display=swap");
 //color
 $main: #66baba;
 $secondary: #fffdf1;
@@ -31,4 +31,15 @@ textarea {
   black: $black;
   white: $white;
   font-family: $font-family;
+}
+
+body {
+  font-family: $fontBody;
+  color: $black;
+  line-height: 1.6;
+}
+
+p {
+  color: $black;
+  font-size: 1em;
 }
