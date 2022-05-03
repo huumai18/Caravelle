@@ -48,7 +48,7 @@ export const Nav = () => {
             to="about"
             spy={true}
             smooth={true}
-            offset={10}
+            offset={0}
             duration={700}
             onClick={() => {
               setClose(false);
@@ -63,7 +63,7 @@ export const Nav = () => {
             to="reservation"
             spy={true}
             smooth={true}
-            offset={0}
+            offset={5}
             duration={800}
             onClick={() => {
               setClose(false);
@@ -79,7 +79,7 @@ export const Nav = () => {
             to="location"
             spy={true}
             smooth={true}
-            offset={0}
+            offset={5}
             duration={1200}
             onClick={() => {
               setClose(false);
