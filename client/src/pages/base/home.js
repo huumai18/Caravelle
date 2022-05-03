@@ -7,11 +7,15 @@ export const Home = () => {
     <section className="home" id="home">
       <div className="container">
         <div>
-          <img src={NavBg} alt="home page background" />
+          <img
+            src={NavBg}
+            className="home bg"
+            height="100%"
+            alt="home page background"
+          />
         </div>
 
         <img src={Logo} className="logo" alt="logo" />
-        <Nav />
       </div>
     </section>
   );
