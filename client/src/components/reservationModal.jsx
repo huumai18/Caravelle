@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Modal from "react-modal";
 import { Button } from "@mui/material";
 
@@ -36,7 +36,7 @@ export const ReservationModal = ({ OpenModal }) => {
           </div>
         </div>
         <div className="reservation-right">
-          <form action="/">
+          <form>
             <div className="infor">
               <label>
                 <h3>FULLNAME</h3>
