@@ -37,8 +37,8 @@ app.post("/send_mail", cors(), async (req, res) => {
 });
 
 app.listen(
-  (process.env.PORT || 4000,
+  (process.env.PORT || 5000,
   () => {
-    console.log("server is listening on port 4000");
+    console.log("server is listening on port 5000");
   })
 );
