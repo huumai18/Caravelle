@@ -23,8 +23,11 @@
       font-family: $fontBody;
       padding: 1em;
       &.active {
-        background-color: $main;
-        color: $white;
+        background-color: transparent;
+        text-decoration: underline 2px $main;
+        text-underline-offset: 0.5em;
+        transition: 300ms ease;
+        cursor: pointer;
       }
       &:hover {
         background-color: transparent;
