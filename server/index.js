@@ -15,10 +15,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.post("/api/email", (req, res) => {
-  const { name, time, people, email, phone } = req.body;
+  const { name, time, email } = req.body;
   mailgun().messages.send(
     {
-      from: "Reservation <resrvation.restaurant@gmail.com",
+      from: "Reservation <resrvation.restaurant@gmail.com>",
       to: `${email}`,
       subject: `Reservation table`,
       html: `<p>Thank you ${name} for your reservation.<p>
@@ -37,7 +37,7 @@ app.post("/api/email", (req, res) => {
   );
 });
 
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`server run at port ${port}`);
 });

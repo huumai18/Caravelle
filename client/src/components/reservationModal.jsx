@@ -3,7 +3,7 @@ import Modal from "react-modal";
 import { Button } from "@mui/material";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import axios from "axios";
+import { axios } from "axios";
 
 export const ReservationModal = ({ OpenModal }) => {
   const [success, setSent] = useState(false);
@@ -15,13 +15,15 @@ export const ReservationModal = ({ OpenModal }) => {
   const [phone, setPhone] = useState("");
 
   const handleSend = async (e) => {
-    setSent(true);
+    e.preventDefault();
     if (!name || !time || !people || !email || !phone) {
       return toast.error("Please enter your valid information!");
+    } else {
+      setSent(true);
     }
     try {
       setLoading(true);
-      const { data } = await axios.port(`/api/email`, {
+      const { data } = await axios.post(`/api/email`, {
         name,
         time,
         people,
