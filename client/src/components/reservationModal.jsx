@@ -1,8 +1,45 @@
 import React from "react";
 import Modal from "react-modal";
 import { Button } from "@mui/material";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
 
 export const ReservationModal = ({ OpenModal }) => {
+  const [success, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [name, setName] = useState("");
+  const [time, setTime] = useState("");
+  const [people, setPeople] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+
+  const handleSend = async (e) => {
+    setSent(true);
+    if (!name || !time || !people || !email || !phone) {
+      return toast.error("Please enter your valid information!");
+    }
+    try {
+      setLoading(true);
+      const { data } = await axios.port(`/api/email`, {
+        name,
+        time,
+        people,
+        email,
+        phone,
+      });
+      setLoading(false);
+      toast.success(data.message);
+    } catch (err) {
+      setLoading(false);
+      toast.error(
+        err.response && err.response.data.message
+          ? err.response.data.message
+          : err.message
+      );
+    }
+  };
+
   return (
     <Modal
       isOpen={OpenModal}
@@ -11,6 +48,7 @@ export const ReservationModal = ({ OpenModal }) => {
       className="mod"
       overlayClassName="over"
     >
+      <ToastContainer position="bottom-center" limit={1} />
       <div className="modal-box">
         <div className="reservation-left">
           <div className="top">
@@ -36,46 +74,85 @@ export const ReservationModal = ({ OpenModal }) => {
           </div>
         </div>
         <div className="reservation-right">
-          <form>
-            <div className="infor">
-              <label>
-                <h3>FULLNAME</h3>
-              </label>
-              <input type="text" placeholder="John Wick" pattern="[A-Z][a-z]" />
-            </div>
-            <div className="infor">
-              <label>
-                <h3>TIME</h3>
-              </label>
-              <input type="datetime-local" />
-            </div>
-            <div className="infor">
-              <label>
-                <h3>PEOPLE</h3>
-              </label>
-              <input min={0} max={50} type="number" placeholder="0" />
-            </div>
-            <div className="infor">
-              <label>
-                <h3>EMAIL</h3>
-              </label>
-              <input
-                pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
-                type="email"
-                placeholder="abc@gmail.com"
-                required
-              />
-            </div>
-            <div className="infor">
-              <label>
-                <h3>PHONE</h3>
-              </label>
-              <input type="phone" placeholder="(###) ###-####" />
-            </div>
-            <div className="btn-submit">
-              <Button>Submit Reservation</Button>
-            </div>
-          </form>
+          {!success ? (
+            <form onSubmit={handleSend}>
+              <div className="infor">
+                <label>
+                  <h3>NAME</h3>
+                </label>
+                <input
+                  type="text"
+                  placeholder="John Wick"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                />
+              </div>
+              <div className="infor">
+                <label>
+                  <h3>TIME</h3>
+                </label>
+                <input
+                  type="datetime-local"
+                  value={time}
+                  onChange={(e) => setTime(e.target.value)}
+                />
+              </div>
+              <div className="infor">
+                <label>
+                  <h3>PEOPLE</h3>
+                </label>
+                <input
+                  min={0}
+                  max={50}
+                  type="number"
+                  placeholder="0"
+                  value={people}
+                  onChange={(e) => setPeople(e.target.value)}
+                />
+              </div>
+              <div className="infor">
+                <label>
+                  <h3>EMAIL</h3>
+                </label>
+                <input
+                  // pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+                  type="email"
+                  placeholder="abc@gmail.com"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+              </div>
+              <div className="infor">
+                <label>
+                  <h3>PHONE</h3>
+                </label>
+                <input
+                  type="phone"
+                  placeholder="(###) ###-####"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                />
+              </div>
+              <div className="btn-submit">
+                <Button disabled={loading} type="submit">
+                  {loading ? "Sending..." : "Reservation"}
+                </Button>
+              </div>
+            </form>
+          ) : (
+            <>
+              <div className="submit-box">
+                <>
+                  <p>
+                    Thank you for your reservation! Please check your email!
+                  </p>
+                  <br />
+                  <Button onClick={() => OpenModal(false)}>Done</Button>
+                </>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </Modal>
