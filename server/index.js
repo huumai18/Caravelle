@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.post("/api/email", (req, res) => {
-  const { name, time, people, email, phone } = req.body;
+  const { name, time, email } = req.body;
   mailgun().messages.send(
     {
       from: "Reservation <resrvation.restaurant@gmail.com>",

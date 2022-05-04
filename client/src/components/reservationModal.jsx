@@ -23,7 +23,7 @@ export const ReservationModal = ({ OpenModal }) => {
     }
     try {
       setLoading(true);
-      const { data } = await axios.port(`/api/email`, {
+      const { data } = await axios.post(`/api/email`, {
         name,
         time,
         people,
