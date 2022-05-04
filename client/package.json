@@ -1,8 +1,10 @@
 {
   "name": "caravelle",
+  "proxy": "http://localhost:3001/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^3.6.2",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "@mui/icons-material": "^5.6.2",
@@ -20,6 +22,7 @@
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "react-scroll": "^1.8.7",
+    "react-toastify": "^9.0.0",
     "redux": "^4.2.0",
     "router-dom": "^2.2.9",
     "sass": "^1.51.0",
