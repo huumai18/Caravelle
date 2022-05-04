@@ -1,5 +1,4 @@
 {
-  "proxy": "http://localhost:3001/",
   "dependencies": {
     "google-map-react": "^2.1.10",
     "google-maps-react": "^2.0.6"
