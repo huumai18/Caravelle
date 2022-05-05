@@ -85,6 +85,7 @@ export const ReservationModal = ({ OpenModal }) => {
                   <h3>NAME</h3>
                 </label>
                 <input
+                  required
                   type="text"
                   placeholder="John Wick"
                   value={userName}
@@ -96,7 +97,9 @@ export const ReservationModal = ({ OpenModal }) => {
                   <h3>TIME</h3>
                 </label>
                 <input
+                  required
                   type="datetime-local"
+                  formTarget="dd-MMM-yy HH:mm"
                   value={userTime}
                   onChange={handleChange("userTime")}
                 />
@@ -106,6 +109,7 @@ export const ReservationModal = ({ OpenModal }) => {
                   <h3>PEOPLE</h3>
                 </label>
                 <input
+                  required
                   min={0}
                   max={50}
                   type="number"
@@ -132,6 +136,7 @@ export const ReservationModal = ({ OpenModal }) => {
                   <h3>PHONE</h3>
                 </label>
                 <input
+                  required
                   type="phone"
                   placeholder="(###) ###-####"
                   value={userPhone}

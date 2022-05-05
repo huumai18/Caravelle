@@ -53,12 +53,12 @@
       justify-content: center;
       height: 500px;
       display: flex;
-      padding-top: 4em;
+      padding-top: 5em;
+      cursor: pointer;
       img {
         height: 400px;
         width: 250px;
         transition: transform 0.3s ease-out;
-        cursor: pointer;
       }
       .model-left,
       .model-right2 {
