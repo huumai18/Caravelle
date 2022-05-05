@@ -51,10 +51,12 @@
         right: 10%;
       }
       .nav-links {
+        height: 12em;
+        width: 8em;
         display: flex;
         flex-direction: column;
         position: fixed;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
         top: 10%;
         border-radius: 0.5em;
