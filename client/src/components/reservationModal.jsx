@@ -1,28 +1,27 @@
- import React, { useState } from "react";
- import Modal from "react-modal";
- import { Button } from "@mui/material";
- import { toast, ToastContainer } from "react-toastify";
- import "react-toastify/dist/ReactToastify.css";
+import React, { useState } from "react";
+import Modal from "react-modal";
+import { Button } from "@mui/material";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { sendMail } from "../api/Mail";
 
+export const ReservationModal = ({ OpenModal }) => {
+  const [success, setSent] = useState(false);
+  const [loading] = useState(false);
 
- import { sendMail } from "../Redux/helper/Mail";
-   export const ReservationModal = ({ OpenModal }) => {
-   const [success, setSent] = useState(false);
-   const [loading] = useState(false);
+  //values users arrayList
+  const [values, setValues] = useState({
+    userName: "",
+    userTime: "",
+    userPeople: "",
+    userEmail: "",
+    userPhone: "",
+  });
 
-   //values users arrayList
-   const [values, setValues] = useState({
-     userName: "",
-     userTime: "",
-     userPeople: "",
-     userEmail: "",
-     userPhone: "",
-   });
-
-   const { userName, userTime, userPeople, userEmail, userPhone } = values;
-   const handleChange = (name) => (event) => {
-     setValues({ ...values, [name]: event.target.value });
-   };
+  const { userName, userTime, userPeople, userEmail, userPhone } = values;
+  const handleChange = (name) => (event) => {
+    setValues({ ...values, [name]: event.target.value });
+  };
 
   const handleSend = (event) => {
     event.preventDefault();
