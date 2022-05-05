@@ -38,6 +38,7 @@ export const ReservationModal = ({ OpenModal }) => {
             console.log("Success", data);
             setValues({ ...values });
             setSent(true);
+            return toast.success("Your reservation has been sent!");
           }
         })
         .catch(console.log("error in send email!"));
