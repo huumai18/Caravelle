@@ -3,45 +3,46 @@ import Modal from "react-modal";
 import { Button } from "@mui/material";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { axios } from "axios";
+// import { axios } from "axios";
+
+import { sendMail } from "../Redux/helper/Mail";
 
 export const ReservationModal = ({ OpenModal }) => {
   const [success, setSent] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [name, setName] = useState("");
-  const [time, setTime] = useState("");
-  const [people, setPeople] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
+  const [loading] = useState(false);
 
-  const handleSend = async (e) => {
-    e.preventDefault();
-    if (!name || !time || !people || !email || !phone) {
-      return toast.error("Please enter your valid information!");
-    } else {
-      setSent(true);
-    }
-    try {
-      setLoading(true);
-      const { data } = await axios.post(`/api/email`, {
-        name,
-        time,
-        people,
-        email,
-        phone,
-      });
-      setLoading(false);
-      toast.success(data.message);
-    } catch (err) {
-      setLoading(false);
-      toast.error(
-        err.response && err.response.data.message
-          ? err.response.data.message
-          : err.message
-      );
-    }
+  //values users arrayList
+  const [values, setValues] = useState({
+    userName: "",
+    userTime: "",
+    userPeople: "",
+    userEmail: "",
+    userPhone: "",
+  });
+
+  const { userName, userTime, userPeople, userEmail, userPhone } = values;
+  const handleChange = (name) => (event) => {
+    setValues({ ...values, [name]: event.target.value });
   };
 
+  const handleSend = (event) => {
+    event.preventDefault();
+    if (!userName || !userTime || !userPeople || !userEmail || !userPhone) {
+      return toast.error("Please fill all the form!");
+    } else {
+      sendMail({ userName, userTime, userPeople, userEmail, userPhone })
+        .then((data) => {
+          if (data.err) {
+            console.log("err", data.err);
+          } else {
+            console.log("Success", data);
+            setValues({ ...values });
+            setSent(true);
+          }
+        })
+        .catch(console.log("error in send email!"));
+    }
+  };
   return (
     <Modal
       isOpen={OpenModal}
@@ -51,32 +52,32 @@ export const ReservationModal = ({ OpenModal }) => {
       overlayClassName="over"
     >
       <ToastContainer position="bottom-center" limit={1} />
-      <div className="modal-box">
-        <div className="reservation-left">
-          <div className="top">
-            <h1>MAKE A RESERVATION</h1>
+      {!success ? (
+        <div className="modal-box">
+          <div className="reservation-left">
+            <div className="top">
+              <h1>MAKE A RESERVATION</h1>
+            </div>
+            <div className="midle">
+              <h3>
+                <p>Fill out the form and submit your reservation</p>
+              </h3>
+            </div>
+            <div className="end">
+              <h3>
+                <p>
+                  Moday 11:00 - 00 <br />
+                  Tuesday: 11:00 - 00 <br />
+                  Wednesday: 11:00 - 00 <br />
+                  Thursday: 11:00 - 00 <br />
+                  Friday: 11:00 - 00 <br />
+                  Saturday: 11:00 - 00 <br />
+                  Sunday: 11:00 - 00 <br />
+                </p>
+              </h3>
+            </div>
           </div>
-          <div className="midle">
-            <h3>
-              <p>Fill out the form and submit your reservation</p>
-            </h3>
-          </div>
-          <div className="end">
-            <h3>
-              <p>
-                Moday 11:00 - 00 <br />
-                Tuesday: 11:00 - 00 <br />
-                Wednesday: 11:00 - 00 <br />
-                Thursday: 11:00 - 00 <br />
-                Friday: 11:00 - 00 <br />
-                Saturday: 11:00 - 00 <br />
-                Sunday: 11:00 - 00 <br />
-              </p>
-            </h3>
-          </div>
-        </div>
-        <div className="reservation-right">
-          {!success ? (
+          <div className="reservation-right">
             <form onSubmit={handleSend}>
               <div className="infor">
                 <label>
@@ -85,8 +86,8 @@ export const ReservationModal = ({ OpenModal }) => {
                 <input
                   type="text"
                   placeholder="John Wick"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
+                  value={userName}
+                  onChange={handleChange("userName")}
                 />
               </div>
               <div className="infor">
@@ -95,8 +96,8 @@ export const ReservationModal = ({ OpenModal }) => {
                 </label>
                 <input
                   type="datetime-local"
-                  value={time}
-                  onChange={(e) => setTime(e.target.value)}
+                  value={userTime}
+                  onChange={handleChange("userTime")}
                 />
               </div>
               <div className="infor">
@@ -108,8 +109,8 @@ export const ReservationModal = ({ OpenModal }) => {
                   max={50}
                   type="number"
                   placeholder="0"
-                  value={people}
-                  onChange={(e) => setPeople(e.target.value)}
+                  value={userPeople}
+                  onChange={handleChange("userPeople")}
                 />
               </div>
               <div className="infor">
@@ -120,8 +121,8 @@ export const ReservationModal = ({ OpenModal }) => {
                   // pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
                   type="email"
                   placeholder="abc@gmail.com"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  value={userEmail}
+                  onChange={handleChange("userEmail")}
                   required
                 />
               </div>
@@ -132,8 +133,8 @@ export const ReservationModal = ({ OpenModal }) => {
                 <input
                   type="phone"
                   placeholder="(###) ###-####"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
+                  value={userPhone}
+                  onChange={handleChange("userPhone")}
                 />
               </div>
               <div className="btn-submit">
@@ -142,21 +143,19 @@ export const ReservationModal = ({ OpenModal }) => {
                 </Button>
               </div>
             </form>
-          ) : (
-            <>
-              <div className="submit-box">
-                <>
-                  <p>
-                    Thank you for your reservation! Please check your email!
-                  </p>
-                  <br />
-                  <Button onClick={() => OpenModal(false)}>Done</Button>
-                </>
-              </div>
-            </>
-          )}
+          </div>
         </div>
-      </div>
+      ) : (
+        <>
+          <div className="submit-box">
+            <>
+              <p>Thank you for your reservation! Please check your email!</p>
+              <br />
+              <Button onClick={() => OpenModal(false)}>Done</Button>
+            </>
+          </div>
+        </>
+      )}
     </Modal>
   );
 };
