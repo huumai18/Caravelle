@@ -76,7 +76,7 @@ export const Nav = () => {
           <Link
             className="link"
             activeClassName="active"
-            to="location"
+            to="footer"
             spy={true}
             smooth={true}
             offset={5}
@@ -87,6 +87,22 @@ export const Nav = () => {
             }}
           >
             Location
+          </Link>
+
+          <Link
+            className="link"
+            activeClassName="active"
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={5}
+            duration={1200}
+            onClick={() => {
+              setClose(false);
+              setOpen(false);
+            }}
+          >
+            Contact Us
           </Link>
         </div>
       </div>
