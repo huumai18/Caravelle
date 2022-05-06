@@ -48,18 +48,21 @@
         }
       }
     }
-    @include respond-to("desktop") {
-      .reservation-images {
-        justify-content: center;
-        height: auto;
-        display: flex;
-        padding-top: 5em;
-        cursor: pointer;
-        img {
-          height: 400px;
-          width: 250px;
-          transition: transform 0.3s ease-out;
-        }
+    .reservation-images {
+      justify-content: center;
+      height: auto;
+      display: flex;
+      padding-top: 5em;
+      cursor: pointer;
+      img {
+        border-radius: 0.5em;
+        margin-right: 2em;
+        height: 400px;
+        width: 250px;
+        transition: transform 0.3s ease-out;
+        box-shadow: 5px 5px 15px -3px $black;
+      }
+      @include respond-to("desktop") {
         .model-left,
         .model-right2 {
           transform: translate(0%, 10%);
@@ -68,10 +71,7 @@
         .model-right {
           transform: translate(0%, -10%);
         }
-        &:hover .model-left,
-        &:hover .model-left2,
-        &:hover .model-right,
-        &:hover .model-right2 {
+        &:hover .model {
           transform: translate(0%, 0%);
         }
       }
@@ -80,14 +80,39 @@
   @include respond-to("tablet") {
     .container {
       height: auto;
-      width: 100%;
+      width: 95%;
       .vector {
         width: 8em;
         height: 8em;
       }
-    }
-    .reservation-image {
-      width: 100%;
+      .vector {
+        right: -2em;
+        bottom: -5em;
+      }
+      .reservation-images {
+        height: auto;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+        gap: 1em 2em;
+        .modal-right {
+          grid-area: 1 / 1 / 2 / 2;
+        }
+        .modal-right2 {
+          grid-area: 1 / 2 / 2 / 3;
+        }
+        .modal-left {
+          grid-area: 2 / 1 / 3 / 2;
+        }
+        .modal-left2 {
+          grid-area: 2 / 2 / 3 / 3;
+        }
+        img {
+          width: 100%;
+          margin: 0;
+        }
+      }
     }
   }
 }
