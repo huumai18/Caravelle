@@ -102,7 +102,7 @@ export const Nav = () => {
               setOpen(false);
             }}
           >
-            Contact Us
+            Contact
           </Link>
         </div>
       </div>
