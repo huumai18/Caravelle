@@ -1,5 +1,6 @@
 @use "../container" as *;
 @use "../variables/" as *;
+@use "../components" as *;
 
 .home {
   .container {
@@ -20,6 +21,14 @@
     .bg {
       height: 75vh;
       width: 100%;
+    }
+  }
+  @include respond-to("tablet") {
+    .container {
+      height: auto;
+      .bg {
+        height: 65vh;
+      }
     }
   }
 }

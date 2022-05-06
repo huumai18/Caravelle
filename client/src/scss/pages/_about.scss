@@ -55,6 +55,7 @@
 
   @include respond-to("tablet") {
     .container {
+      margin-top: 1em;
       flex-direction: column;
       height: auto;
       .background {
