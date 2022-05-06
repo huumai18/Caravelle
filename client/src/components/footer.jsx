@@ -5,7 +5,7 @@ import { ContactModal } from "./contactModal";
 export const Footer = () => {
   const [open, handleOpen] = useState(false);
   return (
-    <div className="footer container">
+    <div className="footer container" id="contact">
       <div className="left-footer">
         <div className="left-text">
           <h2>Ready to get started?</h2>
