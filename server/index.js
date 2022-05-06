@@ -6,7 +6,6 @@ const cors = require("cors");
 
 //import routes
 const Mail = require("./routers/mail");
-
 const port = process.env.PORT || 5000;
 
 app.use(bodyParser.json());

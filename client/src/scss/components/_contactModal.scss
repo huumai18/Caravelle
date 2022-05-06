@@ -1,0 +1,20 @@
+@use '../variables' as *;
+
+.mod-contact {
+    height: 70%;
+    width: 30%;
+    margin-top: 50px;
+    background-color: $white;
+    overflow: auto;
+}
+.over-lay-contact {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+}

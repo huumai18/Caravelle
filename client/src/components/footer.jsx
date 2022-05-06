@@ -1,6 +1,9 @@
 import { Button } from "@mui/material";
+import React, { useState } from "react";
+import { ContactModal } from "./contactModal";
 
 export const Footer = () => {
+  const [open, handleOpen] = useState(false);
   return (
     <div className="footer container">
       <div className="left-footer">
@@ -12,7 +15,10 @@ export const Footer = () => {
           </p>
         </div>
         <div className="left-button">
-          <Button className="button">Start Order Now</Button>
+          <Button onClick={() => handleOpen(true)} className="button">
+            Contact Us
+          </Button>
+          {open && <ContactModal OpenModal={handleOpen} />}
         </div>
       </div>
       <div className="right-footer">

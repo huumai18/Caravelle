@@ -109,9 +109,9 @@ export const ReservationModal = ({ OpenModal }) => {
                 <input
                   required
                   min={0}
-                  max={50}
+                  max={20}
                   type="number"
-                  placeholder="0"
+                  placeholder="0 (max 20 people)"
                   value={userPeople}
                   onChange={handleChange("userPeople")}
                 />
