@@ -63,11 +63,9 @@
         box-shadow: 5px 5px 15px -3px $black;
       }
       @include respond-to("desktop") {
-        .model-left,
-        .model-right2 {
+        .model-left {
           transform: translate(0%, 10%);
         }
-        .model-left2,
         .model-right {
           transform: translate(0%, -10%);
         }
