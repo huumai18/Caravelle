@@ -1,8 +1,8 @@
 @use '../variables' as *;
 
 .mod-contact {
-    height: 70%;
-    width: 30%;
+    height: 30%;
+    width: 25%;
     margin-top: 50px;
     background-color: $white;
     overflow: auto;
@@ -17,4 +17,37 @@
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.4);
+}
+
+.mod-container {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    .mod-text {
+        text-align: center;
+    }
+    .mod-box {
+        .mox-txt {
+            text-align: center;
+        }
+        .mod-email {
+            text-align: center;
+            height: 50px;
+            a {
+                cursor: pointer;
+                &:hover {
+                    background-color: $secondary;
+                    border-bottom: 2px solid $black;
+                }
+            }
+        }
+    }
+}
+
+.line-line {
+    border: 1px dashed $black; 
+    width: 80%; 
+    margin: auto; 
+    margin-top: 5%; 
+    margin-bottom: 5%;
 }
