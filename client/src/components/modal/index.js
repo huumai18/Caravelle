@@ -1,0 +1,1 @@
+export { ModalEmail } from "./modalEmail";

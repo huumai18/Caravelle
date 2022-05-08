@@ -1,0 +1,56 @@
+
+@use "../variables" as *;
+
+
+.modal-email {
+    height: 60%;
+    width: 25%;
+    margin-top: 50px;
+    background-color: $white;
+    overflow: auto;
+}
+.over-lay-email {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.email-modal-box {
+    text-align: center;
+    width: 100%;
+    .information {
+        .form {
+            display: inline-block;
+            .input {
+                width: 85%;
+                padding: 10px;
+                text-align: center;
+            }
+            .txtmessage {
+                padding: 10px;
+                width: 80%;
+                color: $black;
+                background-color: $white;
+            }
+            Button {
+                background-color: $main;
+                color: $white;
+            }
+        }
+    }
+}
+
+.final-done {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2em;
+}

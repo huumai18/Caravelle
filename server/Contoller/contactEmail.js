@@ -2,7 +2,7 @@ const nodeMailer = require("nodemailer");
 
 exports.getMail = (req, res) => {
   console.log("req body", req.body);
-  let nameUser = req.body.nameUser;
+  let nameUser = req.body.name;
   let email = req.body.email;
   let txtMessage = req.body.txtMessage;
 

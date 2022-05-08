@@ -25,6 +25,7 @@
         }
         .left-button {
             padding: 5px;
+            color: $white;
             Button {
                 float: left;
                 margin-left: 20px;
@@ -33,6 +34,7 @@
                 color: $white;
                 text-align: center;
                 font-size: 15px;
+                cursor: pointer;
                 &:hover {
                     background-color: $white;
                     color: $main;
