@@ -33,7 +33,7 @@
         .mod-email {
             text-align: center;
             height: 50px;
-            a {
+            .email-link {
                 cursor: pointer;
                 &:hover {
                     background-color: $secondary;
