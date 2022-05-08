@@ -23,7 +23,7 @@ export const ModalEmail = ({ OpenModal }) => {
   const handleSend = (e) => {
     e.preventDefault();
     if (!name || !email || !txtMessage) {
-      return toast.error("please fill out your valid values!");
+      return toast.error("Please fill out your valid values!");
     } else {
       getMail({ name, email, txtMessage })
         .then((data) => {
@@ -33,7 +33,7 @@ export const ModalEmail = ({ OpenModal }) => {
             console.log("Success", data);
             setValues({ ...values });
             setSent(true);
-            return toast.success("Your reservation has been sent!");
+            return toast.success("Successfully sent your email!");
           }
         })
         .catch(console.log("error in send email!"));
@@ -85,7 +85,7 @@ export const ModalEmail = ({ OpenModal }) => {
                     onChange={handleChange("txtMessage")}
                   />
                   <Button type="submit" className="btn-submit">
-                    Submit
+                    Send
                   </Button>
                 </form>
               </div>
