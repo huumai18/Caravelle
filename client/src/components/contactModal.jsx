@@ -3,6 +3,7 @@ import Modal from "react-modal";
 import { ModalEmail } from "./modal";
 
 import "react-toastify/dist/ReactToastify.css";
+import { Link } from "@mui/material";
 
 export const ContactModal = ({ OpenModal }) => {
   const [open, handleOpen] = useState(false);
@@ -30,9 +31,9 @@ export const ContactModal = ({ OpenModal }) => {
                 <p>
                   {" "}
                   Email <br />
-                  <a href="./" onClick={() => handleOpen(true)}>
+                  <Link className="email-link" onClick={() => handleOpen(true)}>
                     caravelle.reservation@gmail.com
-                  </a>
+                  </Link>
                   {open && <ModalEmail OpenModal={handleOpen} />}
                 </p>
               </div>
