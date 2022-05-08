@@ -1,9 +1,9 @@
 import {
   Narrow,
-  reservation1,
-  reservation2,
-  reservation3,
-  reservation4,
+  sushiImg1,
+  ramenImg,
+  sushiImg2,
+  cocktail,
   vector1,
   vector2,
 } from "../../images";
@@ -42,10 +42,10 @@ export const Reservation = () => {
         {/* Image Reservation */}
 
         <div className="reservation-images">
-          <img className="model model-left" src={reservation1} alt="model" />
-          <img className="model model-right" src={reservation2} alt="model" />
-          <img className="model model-left" src={reservation3} alt="model" />
-          <img className="model model-right" src={reservation4} alt="model" />
+          <img className="model model-left" src={sushiImg1} alt="model" />
+          <img className="model model-right" src={ramenImg} alt="model" />
+          <img className="model model-left" src={sushiImg2} alt="model" />
+          <img className="model model-right" src={cocktail} alt="model" />
         </div>
       </div>
     </section>

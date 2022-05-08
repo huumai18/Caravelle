@@ -30,7 +30,7 @@ export const ContactModal = ({ OpenModal }) => {
                 <p>
                   {" "}
                   Email <br />
-                  <a onClick={() => handleOpen(true)}>
+                  <a href="./" onClick={() => handleOpen(true)}>
                     caravelle.reservation@gmail.com
                   </a>
                   {open && <ModalEmail OpenModal={handleOpen} />}
