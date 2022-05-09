@@ -46,7 +46,7 @@ export const ModalEmail = ({ OpenModal }) => {
         shouldCloseOnOverlayClick={true}
         onRequestClose={() => OpenModal(false)}
         className="modal-email"
-        overlayClassName="over-lay-email"
+        overlayClassName="over-lay"
       >
         <ToastContainer position="bottom-center" limit={1} />
         <div className="email-modal-box">

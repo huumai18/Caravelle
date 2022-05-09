@@ -3,7 +3,7 @@ import Modal from "react-modal";
 import { Button } from "@mui/material";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { sendMail } from "../api/Mail";
+import { sendMail } from "../../api/Mail";
 
 export const ReservationModal = ({ OpenModal }) => {
   const [success, setSent] = useState(false);
@@ -48,7 +48,7 @@ export const ReservationModal = ({ OpenModal }) => {
       shouldCloseOnOverlayClick={true}
       onRequestClose={() => OpenModal(false)}
       className="mod"
-      overlayClassName="over"
+      overlayClassName="over-lay"
     >
       <ToastContainer position="bottom-center" limit={1} />
       {!success ? (

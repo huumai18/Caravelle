@@ -1,6 +1,4 @@
 @forward "footer";
 @forward "nav";
-@forward "reserModal";
 @forward "mixin";
-@forward 'contactModal';
-@forward 'mailContact';
+@use 'modal' as *;

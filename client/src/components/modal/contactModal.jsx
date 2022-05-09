@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
-import { ModalEmail } from "./modal";
+import { ModalEmail } from "./modalEmail";
 
 import "react-toastify/dist/ReactToastify.css";
 import { Link } from "@mui/material";
@@ -14,7 +14,7 @@ export const ContactModal = ({ OpenModal }) => {
         shouldCloseOnOverlayClick={true}
         onRequestClose={() => OpenModal(false)}
         className="mod-contact"
-        overlayClassName="over-lay-contact"
+        overlayClassName="over-lay"
       >
         {/* <ToastContainer position="bottom-center" limit={1} /> */}
         <div className="mod-container">

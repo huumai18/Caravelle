@@ -1,6 +1,6 @@
 import { Button } from "@mui/material";
 import React, { useState } from "react";
-import { ContactModal } from "./contactModal";
+import { ContactModal } from "./modal/contactModal";
 
 export const Footer = () => {
   const [open, handleOpen] = useState(false);

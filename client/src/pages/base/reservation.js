@@ -9,7 +9,7 @@ import {
 } from "../../images";
 import { Button } from "@mui/material";
 import React, { useState } from "react";
-import { ReservationModal } from "../../components";
+import { ReservationModal } from "../../components/modal";
 
 export const Reservation = () => {
   const [open, handleOpen] = useState(false);
