@@ -1,4 +1,4 @@
-@use '../variables' as *;
+@use '../../variables' as *;
 
 .mod-contact {
     height: 30%;
@@ -7,7 +7,7 @@
     background-color: $white;
     overflow: auto;
 }
-.over-lay-contact {
+.over-lay {
     position: fixed;
     top: 0;
     bottom: 0;

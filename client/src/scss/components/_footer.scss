@@ -1,6 +1,6 @@
 @use '../variables' as *;
 @use "../container" as *;
-
+@use "./mixin" as *;
 
 .left-footer {
         float: left;
