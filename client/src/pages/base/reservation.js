@@ -21,9 +21,7 @@ export const Reservation = () => {
         <div className="reservation-header">
           <h1>Welcome</h1>
         </div>
-
         {/* Text Reservation */}
-
         <div className="reservation-text">
           <p>
             Located in the heart of Litile Italy, Sorrento restaurant pizzeria
@@ -38,9 +36,7 @@ export const Reservation = () => {
             {open && <ReservationModal OpenModal={handleOpen} />}
           </p>
         </div>
-
         {/* Image Reservation */}
-
         <div className="reservation-images">
           <img className="model model-left" src={sushiImg1} alt="model" />
           <img className="model model-right" src={ramenImg} alt="model" />

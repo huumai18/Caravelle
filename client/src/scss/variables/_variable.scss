@@ -23,22 +23,23 @@ textarea {
   font-family: $fontBody;
   color: $white;
 }
-
+body {
+  font-family: $fontBody;
+  color: $black;
+  line-height: 1.6;
+}
+p {
+  color: $black;
+  font-size: 1em;
+}
+a,
+Link:hover {
+  cursor: pointer;
+}
 :export {
   main: $main;
   secondary: $secondary;
   black: $black;
   white: $white;
   font-family: $font-family;
-}
-
-body {
-  font-family: $fontBody;
-  color: $black;
-  line-height: 1.6;
-}
-
-p {
-  color: $black;
-  font-size: 1em;
 }
