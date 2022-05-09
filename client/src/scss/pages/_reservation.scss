@@ -62,16 +62,11 @@
         transition: transform 0.3s ease-out;
         box-shadow: 5px 5px 15px -3px $black;
       }
-      @include respond-to("desktop") {
-        .model-left {
-          transform: translate(0%, 10%);
-        }
-        .model-right {
-          transform: translate(0%, -10%);
-        }
-        &:hover .model {
-          transform: translate(0%, 0%);
-        }
+      .model-left {
+        transform: translate(0%, 10%);
+      }
+      .model-right {
+        transform: translate(0%, -10%);
       }
     }
   }
