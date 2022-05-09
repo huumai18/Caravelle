@@ -88,7 +88,16 @@ export const Nav = () => {
           >
             Location
           </Link>
-          <Button variant="container">Contact</Button> {/*open modal*/}
+          <Button
+            variant="container"
+            onClick={() => {
+              setClose(false);
+              setOpen(false);
+            }}
+          >
+            Contact
+          </Button>{" "}
+          {/*open modal*/}
         </div>
       </div>
     </section>
