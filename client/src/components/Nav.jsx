@@ -5,13 +5,9 @@ import { Sling as Hamburger } from "hamburger-react";
 import { ContactModal } from "./modal";
 
 export const Nav = () => {
-  const [closeModal, setCloseModal] = useState(false);
   const [openModal, setOpenModal] = useState(false);
   const [open, setOpen] = useState(false);
   const [close, setClose] = useState(false);
-  const handleClose = () => {
-    setOpenModal(false);
-  };
 
   return (
     <section className="nav">
