@@ -1,6 +1,5 @@
 @forward "footer";
 @forward "nav";
 @forward "mixin";
-@forward 'menu';
-@forward 'reservation';
-@use 'modal' as *;
+@forward "menu";
+@use "modal" as *;

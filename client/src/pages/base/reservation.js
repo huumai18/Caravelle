@@ -47,95 +47,81 @@ export const Reservation = () => {
   };
 
   return (
-    <>
-      <section className="reservation">
-        <div className="container">
-          <div className="title">
-            <h1>Reservation</h1>
-          </div>
-          <div className="form-text">
-            <div className="title">
-              <p>
-                Please make your reservation below and we will have it served at
-                your convenient place, we offer best ever!
-              </p>
-            </div>
-            <div className="line"></div>
-            <div className="text">
-              <h3>Schedule</h3>
-              <div className="schedule">
-                <p>Monday to Sunday: 11:00 - 00:00 am</p>
-              </div>
-              <ToastContainer position="bottom-center" limit={1} />
-              <div className="form">
-                <form onSubmit={handleSend}>
-                  <TextField
-                    className="input"
-                    variant="outlined"
-                    label="Name"
-                    placeholder="John Wick"
-                    type="text"
-                    value={name}
-                    onChange={handleChange("name")}
-                    fullWidth
-                  />
-                  <TextField
-                    className="input"
-                    variant="outlined"
-                    label="Email"
-                    placeholder="abc@gmail.com"
-                    type="email"
-                    value={email}
-                    onChange={handleChange("email")}
-                    fullWidth
-                  />
-                  <TextField
-                    className="input"
-                    variant="outlined"
-                    label="Phone"
-                    placeholder="(888) 888-8888"
-                    type="tel"
-                    value={phone}
-                    onChange={handleChange("phone")}
-                    fullWidth
-                  />
-                  <TextField
-                    className="input"
-                    min={1}
-                    max={20}
-                    variant="outlined"
-                    label="Number People"
-                    placeholder="(1 - 20)"
-                    type="number"
-                    value={people}
-                    onChange={handleChange("people")}
-                    fullWidth
-                  />
-                  <TextField
-                    className="input"
-                    variant="outlined"
-                    type="date"
-                    value={date}
-                    onChange={handleChange("date")}
-                    fullWidth
-                  />
-                  <TextField
-                    className="input"
-                    variant="outlined"
-                    type="time"
-                    value={time}
-                    onChange={handleChange("time")}
-                    fullWidth
-                  />
-                  <div className="btn">
-                    <Button type="submit">Submit Resevation</Button>
-                  </div>
-                </form>
-              </div>
-            </div>
+    <section className="reservation">
+      <div className="container">
+        <div className="title">
+          <h1>Reservation</h1>
+          <p>
+            Please make your reservation below and we will have it served at
+            your convenient place, we offer best ever!
+          </p>
+          <h2>Schedule</h2>
+          <p>Monday to Sunday: 11:00 - 00:00 am</p>
+        </div>
+        <div className="form-text">
+          <ToastContainer position="bottom-center" limit={1} />
+          <div className="form">
+            <form onSubmit={handleSend}>
+              <TextField
+                className="input"
+                variant="outlined"
+                label="Name"
+                placeholder="John Wick"
+                type="text"
+                value={name}
+                onChange={handleChange("name")}
+              />
+              <TextField
+                className="input"
+                variant="outlined"
+                label="Email"
+                placeholder="abc@gmail.com"
+                type="email"
+                value={email}
+                onChange={handleChange("email")}
+              />
+              <TextField
+                className="input"
+                variant="outlined"
+                label="Phone"
+                placeholder="(888) 888-8888"
+                type="tel"
+                value={phone}
+                onChange={handleChange("phone")}
+              />
+              <TextField
+                className="input"
+                min={1}
+                max={20}
+                variant="outlined"
+                label="Number People"
+                placeholder="(1 - 20)"
+                type="number"
+                value={people}
+                onChange={handleChange("people")}
+              />
+              <TextField
+                className="input"
+                variant="outlined"
+                type="date"
+                value={date}
+                onChange={handleChange("date")}
+              />
+              <TextField
+                className="input"
+                variant="outlined"
+                type="time"
+                value={time}
+                onChange={handleChange("time")}
+              />
+
+              <Button className="btn" type="submit">
+                Submit Resevation
+              </Button>
+            </form>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
