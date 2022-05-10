@@ -13,8 +13,6 @@ export const Reservation = () => {
     phone: "",
     people: "",
   });
-
-  const [setSent] = useState(false);
   const { name, date, time, email, phone, people } = values;
   const handleChange = (vls) => (event) => {
     setValues({ ...values, [vls]: event.target.value });
@@ -24,6 +22,8 @@ export const Reservation = () => {
     event.preventDefault();
     if (!name || !date || !time || !email || !phone || !people) {
       return toast.error("Please fill all the form!");
+    } else if (people < 1 || people > 20) {
+      return toast.error("Number of people is not valid (must be 1-20)");
     } else {
       sendMail({ name, date, time, email, phone, people })
         .then((data) => {
@@ -39,7 +39,6 @@ export const Reservation = () => {
               phone: "",
               people: "",
             });
-            setSent(true);
             return toast.success("Your reservation has been sent!");
           }
         })
@@ -67,8 +66,8 @@ export const Reservation = () => {
               <div className="schedule">
                 <p>Monday to Sunday: 11:00 - 00:00 am</p>
               </div>
+              <ToastContainer position="bottom-center" limit={1} />
               <div className="form">
-                <ToastContainer position="bottom-center" limit={1} />
                 <form onSubmit={handleSend}>
                   <TextField
                     className="input"
