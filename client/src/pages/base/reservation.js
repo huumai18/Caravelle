@@ -13,6 +13,7 @@ export const Reservation = () => {
     phone: "",
     people: "",
   });
+  const [setSent] = useState(false);
 
   const { name, date, time, email, phone, people } = values;
   const handleChange = (vls) => (event) => {
@@ -21,7 +22,7 @@ export const Reservation = () => {
 
   const handleSend = (event) => {
     event.preventDefault();
-    if (!name || !date || !time || email || !phone || !people) {
+    if (!name || !date || !time || !email || !phone || !people) {
       return toast.error("Please fill all the form!");
     } else {
       sendMail({ name, date, time, email, phone, people })
@@ -31,6 +32,7 @@ export const Reservation = () => {
           } else {
             console.log("Success", data);
             setValues({ ...values });
+            setSent(true);
             return toast.success("Your reservation has been sent!");
           }
         })
