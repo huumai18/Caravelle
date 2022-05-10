@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon index.js",
     "start": "node index.js",
-    "build": "[my-framework] build --output public"
+    "build": "nodemon build --output public"
   },
   "author": "Van Hien Tieu, Huu Mai",
   "license": "ISC",
