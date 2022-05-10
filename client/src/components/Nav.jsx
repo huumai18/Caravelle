@@ -1,5 +1,6 @@
 import { Link } from "react-scroll";
 import React, { useState } from "react";
+import { Button } from "@mui/material";
 import { Sling as Hamburger } from "hamburger-react";
 
 export const Nav = () => {
@@ -58,11 +59,10 @@ export const Nav = () => {
           >
             Menu
           </Link>
-
           <Link
             className="link"
             activeClassName="active"
-            to="footer"
+            to="location"
             spy={true}
             smooth={true}
             offset={5}
@@ -74,22 +74,16 @@ export const Nav = () => {
           >
             Location
           </Link>
-
-          <Link
-            className="link"
-            activeClassName="active"
-            to="contact"
-            spy={true}
-            smooth={true}
-            offset={5}
-            duration={1200}
+          <Button
+            variant="container"
             onClick={() => {
               setClose(false);
               setOpen(false);
             }}
           >
             Contact
-          </Link>
+          </Button>{" "}
+          {/*open modal*/}
         </div>
       </div>
     </section>

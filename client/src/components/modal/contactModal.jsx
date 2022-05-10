@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import { ModalEmail } from "./modalEmail";
-
 import "react-toastify/dist/ReactToastify.css";
 import { Link } from "@mui/material";
 
