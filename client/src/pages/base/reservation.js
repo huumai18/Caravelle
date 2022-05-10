@@ -1,53 +1,132 @@
-import {
-  Narrow,
-  sushiImg1,
-  ramenImg,
-  sushiImg2,
-  cocktail,
-  vector1,
-  vector2,
-} from "../../images";
-import { Button } from "@mui/material";
+import { TextField, Button } from "@mui/material";
 import React, { useState } from "react";
-import { ReservationModal } from "../../components/modal";
+import { toast, ToastContainer } from "react-toastify";
+import { sendMail } from "../../api/Mail";
 
 export const Reservation = () => {
-  const [open, handleOpen] = useState(false);
+  //values users arrayList
+  const [values, setValues] = useState({
+    name: "",
+    date: "",
+    time: "",
+    email: "",
+    phone: "",
+    people: "",
+  });
+
+  const { name, date, time, email, phone, people } = values;
+  const handleChange = (vls) => (event) => {
+    setValues({ ...values, [vls]: event.target.value });
+  };
+
+  const handleSend = (event) => {
+    event.preventDefault();
+    if (!name || !date || !time || email || !phone || !people) {
+      return toast.error("Please fill all the form!");
+    } else {
+      sendMail({ name, date, time, email, phone, people })
+        .then((data) => {
+          if (data.err) {
+            console.log("err", data.err);
+          } else {
+            console.log("Success", data);
+            setValues({ ...values });
+            return toast.success("Your reservation has been sent!");
+          }
+        })
+        .catch(console.log("error in send email!"));
+    }
+  };
   return (
-    <section className="reservation" id="reservation">
-      <div className="container">
-        <img className="vector vector1" src={vector1} alt="vector1" />
-        <img className="vector vector2" src={vector2} alt="vector2" />
-        <div className="reservation-header">
-          <h1>Welcome</h1>
+    <>
+      <section className="reservation">
+        <div className="container">
+          <div className="title">
+            <h1>Reservation</h1>
+          </div>
+          <div className="form-text">
+            <div className="title">
+              <p>
+                Please make your reservation below and we will have it served at
+                your convenient place, we offer best ever!
+              </p>
+            </div>
+            <div className="line"></div>
+            <div className="text">
+              <h3>Schedule</h3>
+              <div className="schedule">
+                <p>Monday to Sunday: 11:00 - 00:00 am</p>
+              </div>
+              <div className="form">
+                <ToastContainer position="bottom-center" limit={1} />
+                <form onSubmit={handleSend}>
+                  <TextField
+                    className="input"
+                    variant="outlined"
+                    label="Name"
+                    placeholder="John Wick"
+                    type="text"
+                    value={name}
+                    onChange={handleChange("name")}
+                    fullWidth
+                  />
+                  <TextField
+                    className="input"
+                    variant="outlined"
+                    label="Email"
+                    placeholder="abc@gmail.com"
+                    type="email"
+                    value={email}
+                    onChange={handleChange("email")}
+                    fullWidth
+                  />
+                  <TextField
+                    className="input"
+                    variant="outlined"
+                    label="Phone"
+                    placeholder="(888) 888-8888"
+                    type="tel"
+                    value={phone}
+                    onChange={handleChange("phone")}
+                    fullWidth
+                  />
+                  <TextField
+                    className="input"
+                    min={1}
+                    max={20}
+                    variant="outlined"
+                    label="Number People"
+                    placeholder="(1 - 20)"
+                    type="number"
+                    value={people}
+                    onChange={handleChange("people")}
+                    fullWidth
+                  />
+                  <TextField
+                    className="input"
+                    variant="outlined"
+                    type="date"
+                    value={date}
+                    onChange={handleChange("date")}
+                    fullWidth
+                  />
+                  <TextField
+                    className="input"
+                    variant="outlined"
+                    type="time"
+                    value={time}
+                    onChange={handleChange("time")}
+                    fullWidth
+                  />
+                  <div className="btn">
+                    <Button type="submit">Submit Resevation</Button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
-
-        {/* Text Reservation */}
-
-        <div className="reservation-text">
-          <p>
-            Located in the heart of Litile Italy, Sorrento restaurant pizzeria
-            bring sleek modern design
-            <img className="narrow-img" src={Narrow} alt="Narrow" />
-            <Button
-              onClick={() => handleOpen(true)}
-              className="reservation-line-button"
-            >
-              Make Reservation
-            </Button>
-            {open && <ReservationModal OpenModal={handleOpen} />}
-          </p>
-        </div>
-
-        {/* Image Reservation */}
-
-        <div className="reservation-images">
-          <img className="model model-left" src={sushiImg1} alt="model" />
-          <img className="model model-right" src={ramenImg} alt="model" />
-          <img className="model model-left" src={sushiImg2} alt="model" />
-          <img className="model model-right" src={cocktail} alt="model" />
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };

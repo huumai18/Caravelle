@@ -1,47 +1,47 @@
-import React, { useState } from "react";
+import React from "react";
 import Modal from "react-modal";
-import { Button } from "@mui/material";
-import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { sendMail } from "../../api/Mail";
+import { menu } from "../images";
+// import { Button } from "@mui/material";
+// import { toast, ToastContainer } from "react-toastify";
+// import { sendMail } from "../../api/Mail";
 
-export const ReservationModal = ({ OpenModal }) => {
-  const [success, setSent] = useState(false);
-  const [loading] = useState(false);
+export const MenuModal = ({ OpenModal }) => {
+  // const [success, setSent] = useState(false);
+  // const [loading] = useState(false);
 
-  //values users arrayList
-  const [values, setValues] = useState({
-    userName: "",
-    userTime: "",
-    userPeople: "",
-    userEmail: "",
-    userPhone: "",
-  });
+  // //values users arrayList
+  // const [values, setValues] = useState({
+  //   userName: "",
+  //   userTime: "",
+  //   userPeople: "",
+  //   userEmail: "",
+  //   userPhone: "",
+  // });
 
-  const { userName, userTime, userPeople, userEmail, userPhone } = values;
-  const handleChange = (name) => (event) => {
-    setValues({ ...values, [name]: event.target.value });
-  };
+  // const { userName, userTime, userPeople, userEmail, userPhone } = values;
+  // const handleChange = (name) => (event) => {
+  //   setValues({ ...values, [name]: event.target.value });
+  // };
 
-  const handleSend = (event) => {
-    event.preventDefault();
-    if (!userName || !userTime || !userPeople || !userEmail || !userPhone) {
-      return toast.error("Please fill all the form!");
-    } else {
-      sendMail({ userName, userTime, userPeople, userEmail, userPhone })
-        .then((data) => {
-          if (data.err) {
-            console.log("err", data.err);
-          } else {
-            console.log("Success", data);
-            setValues({ ...values });
-            setSent(true);
-            return toast.success("Your reservation has been sent!");
-          }
-        })
-        .catch(console.log("error in send email!"));
-    }
-  };
+  // const handleSend = (event) => {
+  //   event.preventDefault();
+  //   if (!userName || !userTime || !userPeople || !userEmail || !userPhone) {
+  //     return toast.error("Please fill all the form!");
+  //   } else {
+  //     sendMail({ userName, userTime, userPeople, userEmail, userPhone })
+  //       .then((data) => {
+  //         if (data.err) {
+  //           console.log("err", data.err);
+  //         } else {
+  //           console.log("Success", data);
+  //           setValues({ ...values });
+  //           setSent(true);
+  //           return toast.success("Your reservation has been sent!");
+  //         }
+  //       })
+  //       .catch(console.log("error in send email!"));
+  //   }
+  // };
   return (
     <Modal
       isOpen={OpenModal}
@@ -50,7 +50,10 @@ export const ReservationModal = ({ OpenModal }) => {
       className="mod"
       overlayClassName="over-lay"
     >
-      <ToastContainer position="bottom-center" limit={1} />
+      <div className="menu">
+        <img className="menu" src={menu} alt="menu" />
+      </div>
+      {/* <ToastContainer position="bottom-center" limit={1} />
       {!success ? (
         <div className="modal-box">
           <div className="reservation-left">
@@ -159,7 +162,7 @@ export const ReservationModal = ({ OpenModal }) => {
             </>
           </div>
         </>
-      )}
+      )} */}
     </Modal>
   );
 };

@@ -9,7 +9,9 @@ export const Nav = () => {
   return (
     <section className="nav">
       <div className="container">
-        <h2>Caravelle</h2>
+        <Link className="home" to="home" smooth={true}>
+          <h2>Caravelle</h2>
+        </Link>
         <Hamburger
           size={25}
           color="white"
@@ -27,23 +29,7 @@ export const Nav = () => {
         />
         <div className={`nav-links ${open ? "" : "closed"}`}>
           <Link
-            to="home"
-            activeClass="active"
-            className="link"
-            smooth={true}
-            offset={-10}
-            spy={true}
-            duration={700}
-            onClick={() => {
-              setClose(false);
-              setOpen(false);
-            }}
-          >
-            Home
-          </Link>
-          <Link
             activeClassName="active"
-            d
             className="link"
             to="about"
             spy={true}
@@ -60,7 +46,7 @@ export const Nav = () => {
           <Link
             activeClassName="active"
             className="link"
-            to="reservation"
+            to="menu"
             spy={true}
             smooth={true}
             offset={5}
@@ -70,7 +56,7 @@ export const Nav = () => {
               setOpen(false);
             }}
           >
-            Reservation
+            Menu
           </Link>
 
           <Link

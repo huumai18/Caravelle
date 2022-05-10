@@ -1,6 +1,6 @@
 export const NavBg = require("./nav-background.png");
 export const about = require("./about-us.jpeg");
-export const menu = require("./menu.jpeg");
+// export const menu = require("./menu.jpeg");
 export const LocationImage = require("./location.jpg");
 export const sushiImg1 = require("./sushi1.png");
 export const ramenImg = require("./ramen1.png");
@@ -11,3 +11,4 @@ export const ramen = require("./ramen.png");
 export const Narrow = require("./narrow.png");
 export const vector1 = require("./vector1.png");
 export const vector2 = require("./vector2.png");
+export const menu = require("./menu.jpg");

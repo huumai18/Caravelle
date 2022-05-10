@@ -17,9 +17,10 @@
     .hamburger-react {
       display: none;
     }
-    h2 {
+    .home {
       width: 30%;
       color: $white;
+      cursor: pointer;
     }
     .nav-links {
       margin-left: 20em;
