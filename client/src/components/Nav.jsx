@@ -62,6 +62,21 @@ export const Nav = () => {
           <Link
             className="link"
             activeClassName="active"
+            to="reservation"
+            spy={true}
+            smooth={true}
+            offset={5}
+            duration={1200}
+            onClick={() => {
+              setClose(false);
+              setOpen(false);
+            }}
+          >
+            Reservation
+          </Link>
+          <Link
+            className="link"
+            activeClassName="active"
             to="location"
             spy={true}
             smooth={true}

@@ -47,7 +47,7 @@ export const Reservation = () => {
   };
 
   return (
-    <section className="reservation">
+    <section className="reservation" id="reservation">
       <div className="container">
         <div className="title">
           <h1>Reservation</h1>
