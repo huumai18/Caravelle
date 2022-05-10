@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js",
-    "start": "node index.js"
+    "start": "node index.js",
+    "build": "[my-framework] build --output public"
   },
-  "author": "",
+  "author": "Van Hien Tieu, Huu Mai",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.0",
