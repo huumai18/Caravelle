@@ -23,10 +23,12 @@ textarea {
   font-family: $fontBody;
   color: $white;
 }
-body {
+body,
+html {
   font-family: $fontBody;
   color: $black;
   line-height: 1.6;
+  scroll-behavior: smooth;
 }
 p {
   color: $black;
