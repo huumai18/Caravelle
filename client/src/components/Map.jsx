@@ -9,18 +9,14 @@ export const Map = ({ location, zoomLevel }) => {
       <p className="pin-text">{text}</p>
     </div>
   );
-
   const mapStyle = {
-    width: "40%",
     height: "80vh",
-    position: "absolute",
     bottom: "15%",
     right: "15%",
     boxShadow: "0px 4px 11px 7px rgba(0, 0, 0, 0.25)",
   };
-
   return (
-    <div className="locagtion map" style={mapStyle}>
+    <div className="location map" style={mapStyle}>
       {" "}
       <GoogleMapReact
         bootstrapURLKeys={{

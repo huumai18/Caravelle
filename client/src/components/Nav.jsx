@@ -2,10 +2,16 @@ import { Link } from "react-scroll";
 import React, { useState } from "react";
 import { Button } from "@mui/material";
 import { Sling as Hamburger } from "hamburger-react";
+import { ContactModal } from "./modal";
 
 export const Nav = () => {
+  const [closeModal, setCloseModal] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
   const [open, setOpen] = useState(false);
   const [close, setClose] = useState(false);
+  const handleClose = () => {
+    setOpenModal(false);
+  };
 
   return (
     <section className="nav">
@@ -30,7 +36,6 @@ export const Nav = () => {
         />
         <div className={`nav-links ${open ? "" : "closed"}`}>
           <Link
-            activeClassName="active"
             className="link"
             to="about"
             spy={true}
@@ -45,7 +50,6 @@ export const Nav = () => {
             About
           </Link>
           <Link
-            activeClassName="active"
             className="link"
             to="menu"
             spy={true}
@@ -61,7 +65,6 @@ export const Nav = () => {
           </Link>
           <Link
             className="link"
-            activeClassName="active"
             to="reservation"
             spy={true}
             smooth={true}
@@ -76,7 +79,6 @@ export const Nav = () => {
           </Link>
           <Link
             className="link"
-            activeClassName="active"
             to="location"
             spy={true}
             smooth={true}
@@ -92,13 +94,19 @@ export const Nav = () => {
           <Button
             variant="container"
             onClick={() => {
+              setOpenModal(!open);
               setClose(false);
               setOpen(false);
             }}
           >
             Contact
-          </Button>{" "}
-          {/*open modal*/}
+          </Button>
+          {openModal && (
+            <ContactModal
+              onRequestClose={(OpenModal) => OpenModal(false)}
+              OpenModal={openModal}
+            />
+          )}
         </div>
       </div>
     </section>

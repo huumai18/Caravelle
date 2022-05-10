@@ -24,6 +24,7 @@ export const Location = () => {
             <Button
               style={{
                 filter: "drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25))",
+                marginBottom: "1em",
               }}
               variant="text"
             >
