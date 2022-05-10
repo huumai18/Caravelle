@@ -1,4 +1,5 @@
 @use "../variables" as *;
+@use "../components" as *;
 
 .reservation {
   .container {
@@ -26,6 +27,21 @@
       width: auto !important;
       margin-top: 2em;
       border: 1px solid $black;
+    }
+  }
+  @include respond-to("tablet") {
+    .container {
+      width: 90%;
+      height: auto;
+      .form {
+        display: flex;
+        flex-direction: column;
+        .MuiFormControl-root {
+          margin: 1em 2em 0 0;
+          width: 100%;
+          color: $main;
+        }
+      }
     }
   }
 }
