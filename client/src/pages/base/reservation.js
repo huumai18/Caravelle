@@ -13,8 +13,8 @@ export const Reservation = () => {
     phone: "",
     people: "",
   });
-  const [setSent] = useState(false);
 
+  const [setSent] = useState(false);
   const { name, date, time, email, phone, people } = values;
   const handleChange = (vls) => (event) => {
     setValues({ ...values, [vls]: event.target.value });
@@ -31,7 +31,14 @@ export const Reservation = () => {
             console.log("err", data.err);
           } else {
             console.log("Success", data);
-            setValues({ ...values });
+            setValues({
+              name: "",
+              date: "",
+              time: "",
+              email: "",
+              phone: "",
+              people: "",
+            });
             setSent(true);
             return toast.success("Your reservation has been sent!");
           }
@@ -39,6 +46,7 @@ export const Reservation = () => {
         .catch(console.log("error in send email!"));
     }
   };
+
   return (
     <>
       <section className="reservation">
