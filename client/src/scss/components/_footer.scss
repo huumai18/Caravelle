@@ -1,67 +1,73 @@
-@use '../variables' as *;
+@use "../variables" as *;
 @use "../container" as *;
 @use "./mixin" as *;
 
-.left-footer {
-        float: left;
-        width: 100%;
-        margin-left: 9em;
-        height: 80%;
-        padding: 1em 0.5em 0.5em 0.5em;
-        .left-text {
-            color: $white;
-            padding: 20px 20px 20px;
-            h2 {
-                margin: 0.2em;
-                width: 35%;
-                padding: 5px;
-            }
-            p {
-                margin: 0.2em;
-                width: 100%;
-                padding: 5px;
-                color: gray;
-            }
+.footer {
+  .container {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    background-color: $black;
+    .left-footer {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      .left-text {
+        color: $white;
+        margin-left: 10em;
+        width: 70%;
+        p {
+          margin: 0.2em;
+          color: gray;
         }
-        .left-button {
-            padding: 5px;
-            color: $white;
-            Button {
-                float: left;
-                margin-left: 20px;
-                background-color: $main;
-                border-radius: 5px;
-                color: $white;
-                text-align: center;
-                font-size: 15px;
-                cursor: pointer;
-                &:hover {
-                    background-color: $white;
-                    color: $main;
-                }
-            }
-        }
+      }
     }
     .right-footer {
-        float: right;
-        padding: 2em 5em 0;
-        width: 45%;
-        height: 90%;
-        p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      p {
+        color: $main;
+        margin-left: 40px;
+      }
+      li {
+        a {
+          color: $white;
+          text-decoration: none;
+          &:hover {
             color: $main;
-            margin-left: 40px;
+          }
         }
-        ul {
-            padding-top: 1px;
-        }
-        li {
-            padding-top: 0.8em;
-            a {
-                color: $white;
-                text-decoration: none;
-                &:hover {
-                    color: $main;
-                }
-            }
-        }
+      }
     }
+  }
+  @include respond-to("tablet") {
+    width: 100%;
+    .container {
+      height: auto;
+      padding: 2em;
+      .left-footer {
+        margin-left: 1em;
+        width: 70%;
+        .left-text {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          margin: 0;
+        }
+      }
+      .right-footer {
+        width: 40%;
+        ul {
+          li {
+            margin-top: 0.5em;
+          }
+        }
+      }
+    }
+  }
+}
