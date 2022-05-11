@@ -99,7 +99,7 @@ export const Nav = () => {
           </Button>
           {openModal && (
             <ContactModal
-              onRequestClose={(OpenModal) => OpenModal(false)}
+              onRequestClose={() => setOpenModal(false)}
               OpenModal={openModal}
             />
           )}
