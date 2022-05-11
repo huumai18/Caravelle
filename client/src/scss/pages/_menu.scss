@@ -62,15 +62,20 @@
         transition: transform 0.3s ease-out;
         box-shadow: 5px 5px 15px -3px $black;
       }
-      @include respond-to("desktop") {
-        .model-left {
-          transform: translate(0%, 10%);
+      .model-left {
+        animation: move-up 4.5s ease-in-out infinite alternate-reverse;
+        @keyframes move-up {
+          to {
+            transform: translateY(2em);
+          }
         }
-        .model-right {
-          transform: translate(0%, -10%);
-        }
-        &:hover .model {
-          transform: translate(0%, 0%);
+      }
+      .model-right {
+        animation: move-down 3s ease infinite alternate-reverse;
+        @keyframes move-down {
+          to {
+            transform: translateY(-2em);
+          }
         }
       }
     }
@@ -88,6 +93,7 @@
       }
       .menu-images {
         height: auto;
+        margin-top: 1em;
         padding: 0;
         display: grid;
         grid-template-columns: 50% 50%;
