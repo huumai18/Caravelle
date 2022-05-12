@@ -88,6 +88,7 @@ export const Nav = () => {
             Location
           </Link>
           <Button
+            className="button"
             variant="container"
             onClick={() => {
               setOpenModal(!open);

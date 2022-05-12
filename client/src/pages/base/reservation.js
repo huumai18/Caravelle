@@ -115,7 +115,7 @@ export const Reservation = () => {
                 onChange={handleChange("time")}
               />
 
-              <Button className="btn" type="submit">
+              <Button className="button" type="submit">
                 Submit Resevation
               </Button>
             </form>

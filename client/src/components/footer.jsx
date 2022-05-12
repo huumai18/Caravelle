@@ -6,7 +6,7 @@ export const Footer = () => {
   const [open, handleOpen] = useState(false);
   return (
     <section className="footer" id="contact">
-      <div className="container">
+      <div className="footer-container">
         <div className="left-footer">
           <div className="left-text">
             <h2>Ready to get started?</h2>
@@ -14,7 +14,11 @@ export const Footer = () => {
               Lorem ipsum dolar sot amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt.
             </p>
-            <Button sx={{ mt: "2em" }} onClick={() => handleOpen(true)}>
+            <Button
+              className="button"
+              sx={{ mt: "2em" }}
+              onClick={() => handleOpen(true)}
+            >
               Contact Us
             </Button>
             {open && <ContactModal OpenModal={handleOpen} />}
