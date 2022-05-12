@@ -6,13 +6,8 @@ export const Home = () => {
   return (
     <section className="home" id="home">
       <div className="container">
-        <div>
-          <img
-            src={NavBg}
-            className="home bg"
-            height="100%"
-            alt="home page background"
-          />
+        <div className="bg">
+          <img src={NavBg} alt="home page background" />
         </div>
         <Roll left>
           <img src={Logo} className="logo" alt="logo" />

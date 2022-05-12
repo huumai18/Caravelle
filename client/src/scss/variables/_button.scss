@@ -1,0 +1,14 @@
+@use "./variable" as *;
+
+.button {
+  background-color: $white;
+  color: $black;
+  font-family: $fontBody;
+  &:hover {
+    color: $black;
+    background-color: $white;
+    text-decoration: underline 2px $main;
+    text-underline-offset: 0.5em;
+    transition: 300ms ease;
+  }
+}

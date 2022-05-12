@@ -12,6 +12,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    border-radius: 0.5em;
     .map {
       position: absolute;
       width: 40%;
@@ -50,7 +51,7 @@
       }
       .direction {
         height: 15%;
-        width: 100%;
+        width: 90%;
         .headings {
           align-items: center;
           margin: 0;

@@ -19,15 +19,25 @@
       }
     }
     .bg {
-      height: 75vh;
-      width: 100%;
+      width: 90%;
+      height: 80vh;
+      img {
+        border-radius: 0 0 1em 1em;
+        height: 100%;
+        width: 100%;
+      }
     }
   }
   @include respond-to("tablet") {
     .container {
       height: auto;
       .bg {
-        height: 55vh;
+        width: 100%;
+        height: 70vh;
+        img {
+          width: 100%;
+          height: 100%;
+        }
       }
     }
   }

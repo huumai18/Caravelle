@@ -3,6 +3,7 @@
 
 .reservation {
   .container {
+    width: 90%;
     h1 {
       font-size: 2.5em;
     }
@@ -22,8 +23,7 @@
         color: $black;
       }
     }
-
-    .btn {
+    .button {
       width: auto !important;
       margin-top: 2em;
       border: 1px solid $black;

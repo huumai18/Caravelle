@@ -4,20 +4,10 @@
 
 .container {
   width: 1440px;
+  width: 90%;
   max-width: 100%;
   position: relative;
-  .MuiButton-root {
-    background-color: $white;
-    color: $black;
-    &:hover {
-      color: $black;
-      background-color: $white;
-      text-decoration: underline 2px $main;
-      text-underline-offset: 0.5em;
-      transition: 300ms ease;
-    }
-  }
-  @media only screen and (min-width: 360px) and (max-width: 768px) {
+  @include respond-to("tablet") {
     max-width: 100%;
     position: relative;
   }
