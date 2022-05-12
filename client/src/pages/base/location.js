@@ -11,7 +11,13 @@ export const Location = () => {
   return (
     <section className="location" id="location">
       <img
-        style={{ width: "90%", height: "100%", position: "absolute" }}
+        style={{
+          width: "90%",
+          height: "100%",
+          position: "absolute",
+          borderRadius: "0.5em",
+        }}
+        d
         src={LocationImage}
         alt="location background"
       />
@@ -22,6 +28,7 @@ export const Location = () => {
               Come And Join Us at CARAVELLE 123 Miain Str Calgary A1A 1A1!!
             </h2>
             <Button
+              className="button"
               style={{
                 filter: "drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25))",
                 marginBottom: "1em",
