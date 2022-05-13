@@ -1,11 +1,8 @@
 import { Link } from "react-scroll";
 import React, { useState } from "react";
-import { Button } from "@mui/material";
 import { Sling as Hamburger } from "hamburger-react";
-import { ContactModal } from "./modal";
 
 export const Nav = () => {
-  const [openModal, setOpenModal] = useState(false);
   const [open, setOpen] = useState(false);
   const [close, setClose] = useState(false);
 
@@ -87,23 +84,6 @@ export const Nav = () => {
           >
             Location
           </Link>
-          <Button
-            className="button"
-            variant="container"
-            onClick={() => {
-              setOpenModal(!open);
-              setClose(false);
-              setOpen(false);
-            }}
-          >
-            Contact
-          </Button>
-          {openModal && (
-            <ContactModal
-              onRequestClose={() => setOpenModal(false)}
-              OpenModal={openModal}
-            />
-          )}
         </div>
       </div>
     </section>
