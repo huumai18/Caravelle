@@ -8,6 +8,18 @@
     height: 40vh;
     display: flex;
     background-color: $black;
+    .button {
+      background-color: $white;
+      color: $black;
+      font-family: $fontBody;
+      &:hover {
+        color: $black;
+        background-color: $white;
+        text-decoration: underline 2px $main;
+        text-underline-offset: 0.5em;
+        transition: 300ms ease;
+      }
+    }
     .left-footer {
       width: 50%;
       display: flex;
