@@ -17,7 +17,8 @@
         background-color: $white;
         text-decoration: underline 2px $main;
         text-underline-offset: 0.5em;
-        transition: 300ms ease;
+        transition: background-color 200ms ease text-decoration 200ms linear
+          border-color 200ms ease;
       }
     }
     .left-footer {
