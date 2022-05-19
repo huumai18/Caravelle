@@ -1,54 +1,58 @@
-@use '../../variables' as *;
+@use "../../variables" as *;
+@use "../mixin" as *;
 
 .mod-contact {
+  height: 30%;
+  width: 25%;
+  margin-top: 50px;
+  background-color: $white;
+  overflow: auto;
+  @include respond-to("tablet") {
     height: 30%;
-    width: 25%;
-    margin-top: 50px;
-    background-color: $white;
-    overflow: auto;
+    width: 70%;
+  }
 }
 .over-lay {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .mod-container {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    .mod-text {
-        text-align: center;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  .mod-text {
+    text-align: center;
+  }
+  .mod-box {
+    .mox-txt {
+      text-align: center;
     }
-    .mod-box {
-        .mox-txt {
-            text-align: center;
+    .mod-email {
+      text-align: center;
+      height: 50px;
+      .email-link {
+        text-decoration: none;
+        cursor: pointer;
+        &:hover {
+          background-color: $secondary;
+          border-bottom: 1px solid $black;
         }
-        .mod-email {
-            text-align: center;
-            height: 50px;
-            .email-link {
-                text-decoration: none;
-                cursor: pointer;
-                &:hover {
-                    background-color: $secondary;
-                    border-bottom: 1px solid $black;
-                }
-            }
-        }
+      }
     }
-}
-
-.line-line {
-    border: 1px dashed $black; 
-    width: 80%; 
-    margin: auto; 
-    margin-top: 5%; 
+  }
+  .line-line {
+    border: 1px dashed $black;
+    width: 80%;
+    margin: auto;
+    margin-top: 5%;
     margin-bottom: 5%;
+  }
 }

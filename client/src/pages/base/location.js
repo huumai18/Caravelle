@@ -10,18 +10,17 @@ export const Location = () => {
   };
   return (
     <section className="location" id="location">
-      <img
-        style={{
-          width: "90%",
-          height: "100%",
-          position: "absolute",
-          borderRadius: "0.5em",
-        }}
-        d
-        src={LocationImage}
-        alt="location background"
-      />
       <div className="container">
+        <img
+          style={{
+            position: "absolute",
+            borderRadius: "0.5em",
+            zIndex: "-1",
+          }}
+          d
+          src={LocationImage}
+          alt="location background"
+        />
         <div className="location direction">
           <div className="location headings">
             <h2>

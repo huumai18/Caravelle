@@ -10,7 +10,7 @@ export const Map = ({ location, zoomLevel }) => {
     </div>
   );
   const mapStyle = {
-    height: "80vh",
+    height: "80%",
     bottom: "15%",
     right: "15%",
     boxShadow: "0px 4px 11px 7px rgba(0, 0, 0, 0.25)",

@@ -8,7 +8,7 @@ export const Nav = () => {
 
   return (
     <section className="nav">
-      <div className="container">
+      <div className="nav-container">
         <Link className="home" to="home" smooth={true}>
           <h2>Caravelle</h2>
         </Link>
@@ -29,6 +29,7 @@ export const Nav = () => {
         />
         <div className={`nav-links ${open ? "" : "closed"}`}>
           <Link
+            href="#about"
             className="link"
             to="about"
             spy={true}
@@ -44,6 +45,7 @@ export const Nav = () => {
           </Link>
           <Link
             className="link"
+            href="#menu"
             to="menu"
             spy={true}
             smooth={true}
@@ -59,6 +61,7 @@ export const Nav = () => {
           <Link
             className="link"
             to="reservation"
+            href="#reservation"
             spy={true}
             smooth={true}
             offset={5}
@@ -72,6 +75,7 @@ export const Nav = () => {
           </Link>
           <Link
             className="link"
+            href="#location"
             to="location"
             spy={true}
             smooth={true}
