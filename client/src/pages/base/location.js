@@ -13,8 +13,6 @@ export const Location = () => {
       <div className="container">
         <img
           style={{
-            width: "100%",
-            height: "100%",
             position: "absolute",
             borderRadius: "0.5em",
             zIndex: "-1",
