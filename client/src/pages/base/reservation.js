@@ -115,7 +115,7 @@ export const Reservation = () => {
                 onChange={handleChange("time")}
               />
 
-              <Button className="button" type="submit">
+              <Button className="button" onClick={handleSend} type="submit">
                 Submit Resevation
               </Button>
             </form>
